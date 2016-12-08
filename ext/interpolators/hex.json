@@ -4,16 +4,17 @@
     "group": "contextual-examples",
     "versions": ["0.9"]
   },
-  "source": "https://github.com/propensive/contextual/blob/master/dsls/src/main/scala/contextual/dsls/binary.scala",
-  "pkg": "contextual.examples.binary",
-  "id": "bin",
-  "name": "Binary Arrays of Bytes",
+  "source": "https://github.com/propensive/contextual/blob/master/dsls/src/main/scala/contextual/dsls/hex.scala",
+  "pkg": "contextual.examples.hex",
+  "id": "hex",
+  "name": "Hexadecimal byte arrays",
   "examples": [
-    "01010100010101101010010010101100",
-    "10010110"
+    "000102030405060708090a0b0c0d0e0f",
+    "cafebabe",
+    "2a"
   ],
   "features": [
-    "Parses binary data",
+    "Parses hexadecimal data",
     "Checks data is an exact number of bytes long",
     "Optimized construction of a new array without any heap allocation",
     "Does not support substitutions"

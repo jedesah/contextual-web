@@ -2,7 +2,7 @@
   "ivy": {
     "artifact": "com.propensive",
     "group": "contextual-examples",
-    "versions": ["1.0"]
+    "versions": ["0.9"]
   },
   "source": "https://github.com/propensive/contextual/blob/master/dsls/src/main/scala/contextual/dsls/json.scala",
   "pkg": "contextual.examples.json",
@@ -15,7 +15,8 @@
     "false"
   ],
   "features": [
-    "Check well-formedness of JSON"
+    "Check well-formedness of JSON",
+    "Still a work-in-progress"
   ],
   "contexts": ["InString", "KeyPosition", "ValuePosition"],
   "returnType": "String",

@@ -2,7 +2,7 @@
   "ivy": {
     "artifact": "com.propensive",
     "group": "contextual-examples",
-    "versions": ["1.0"]
+    "versions": ["0.9"]
   },
   "source": "https://github.com/propensive/contextual/blob/master/dsls/src/main/scala/contextual/dsls/sh.scala",
   "pkg": "contextual.examples.sh",
@@ -10,11 +10,15 @@
   "name": "Shell commands",
   "examples": [
     "grep -r 'Hello World' .",
-    "wc -l $file"
+    "wc -l $file",
+    "git commit --message='Automated: $msg'"
   ],
   "features": [
+    "Parses shell commands into parameters",
+    "Honors single- and double-quotes, and whitespace rules",
+    "Allows embedding of parameters"
   ],
-  "contexts": ["Param", "Params"],
+  "contexts": ["InSingleQuotes", "InDoubleQuotes", "NewParam", "InUnquotedParam"],
   "returnType": "java.lang.Process",
   "license": "Apache 2.0"
 }

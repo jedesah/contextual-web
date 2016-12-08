@@ -255,7 +255,11 @@ object Contextual {
           H4("License"),
           "Apache 2.0",
           H4("Source code"),
-          A(href = Http.parse(interpolator.source))(interpolator.source)
+          Ul(
+            Li(
+              A(href = Http.parse(interpolator.source))("GitHub")
+            )
+          )
         ),
         H3(s"${interpolator.name} (", Code(id), """"")"""),
         Div(

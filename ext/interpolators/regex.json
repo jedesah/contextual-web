@@ -2,7 +2,7 @@
   "ivy": {
     "artifact": "com.propensive",
     "group": "contextual-examples",
-    "versions": ["1.0"]
+    "versions": ["0.9"]
   },
   "source": "https://github.com/propensive/contextual/blob/master/dsls/src/main/scala/contextual/dsls/regex.scala",
   "pkg": "contextual.examples.regex",
