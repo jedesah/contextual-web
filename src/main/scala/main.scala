@@ -239,6 +239,8 @@ object Contextual {
         Pre("def implementation(ctx: Contextual): ctx.Implementation"),
         P(""),
         H4("The ", Code("Contextual"), " type"),
+        P("""We represent the context of an interpolated string with the """, Code("Contextual"), """ type. It provides access to the fixed literal parts of the interpolated string, metadata about the holes, and the means to report errors during compilation, and to construct runtime implementations of the interpolated string."""),
+        P("""Perhaps the most useful method of """, Code("Contextual"), """ is """, Code("parts"), """ which gives a sequence of tokens representing each section of the interpolated string: alternating """, Code("Literal"), " and ", Code("Hole"), """ objects which we can process to analyze the interpolated string.."""),
         H4("Attaching a prefix"),
         P("""In order to make a new string interpolator available through a prefix on a string, the Scala compiler needs to be able to "see" that prefix on Scala's built-in """, Code("StringContext"), """ object. This is very easily done by specifying a new """, Code("Prefix"), """ value with the desired name on an implicit class that wraps """, Code("StringContext"), """."""),
         P("""
