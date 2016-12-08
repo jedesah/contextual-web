@@ -1,0 +1,24 @@
+{
+  "ivy": {
+    "artifact": "com.propensive",
+    "group": "contextual-examples",
+    "versions": ["0.9"]
+  },
+  "source": "https://github.com/propensive/contextual/blob/master/dsls/src/main/scala/contextual/dsls/css.scala",
+  "pkg": "contextual.examples.css",
+  "id": "css",
+  "name": "CSS",
+  "examples": [
+    "color: red",
+    "height: $dim",
+    "margin: $top $sides $bottom; padding: 0;"
+  ],
+  "features": [
+    "Check well-formedness of CSS attributes and values",
+    "Checks that valid CSS3 attribute names are used",
+    "Still a work-in-progress, though implemented in Rapture"
+  ],
+  "contexts": [],
+  "returnType": "Css",
+  "license": "Apache 2.0"
+}

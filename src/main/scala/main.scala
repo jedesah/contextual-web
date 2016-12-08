@@ -148,8 +148,8 @@ object Contextual {
       .page { width: 80vw; max-width: 40em; margin: 5vw auto 5vw auto;
           }
       $P { text-align: justify; font-weight: 300; line-height: 1.8em; font-size: 15px; }
-      .tags a { background-color: #3d9930; text-decoration: none; border-radius: 0.4em; padding: 0.2em 0.5em; line-height: 2em; color: white; opacity: 0.5;  }
-      .tags a:hover { background-color: #3d9930; } 
+      .tags a { background-color: #3d9930; text-decoration: none; border-radius: 0.4em; padding: 0.2em 0.5em; line-height: 2em; color: white; opacity: 0.8;  }
+      .tags a:hover { opacity: 1; text-decoration: none; } 
       
       $Code, $Pre { font-family: 'Droid Sans Mono'; font-size-adjust: 0.52; font-size: 15px; clear: both; }
       $Pre { border: solid 1px #dddddd; background-color: #eeeeee; padding: 4px 12px; }
