@@ -1,0 +1,23 @@
+{
+  "ivy": {
+    "artifact": "com.propensive",
+    "group": "contextual-examples",
+    "versions": ["1.0"]
+  },
+  "source": "https://github.com/propensive/contextual/",
+  "pkg": "contextual.examples.json",
+  "id": "json",
+  "name": "JSON",
+  "ref": "http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf",
+  "examples": [
+    "{ \"foo\": \"bar\" }",
+    "[1, 2.7, \"string\", true, null, [], {}]",
+    "false"
+  ],
+  "features": [
+    "Check well-formedness of JSON"
+  ],
+  "contexts": ["InString", "KeyPosition", "ValuePosition"],
+  "returnType": "String",
+  "license": "Apache 2.0"
+}

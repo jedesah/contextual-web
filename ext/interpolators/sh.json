@@ -1,0 +1,20 @@
+{
+  "ivy": {
+    "artifact": "com.propensive",
+    "group": "contextual-examples",
+    "versions": ["1.0"]
+  },
+  "source": "https://github.com/propensive/contextual/",
+  "pkg": "contextual.examples.sh",
+  "id": "sh",
+  "name": "Shell commands",
+  "examples": [
+    "grep -r 'Hello World' .",
+    "wc -l $file"
+  ],
+  "features": [
+  ],
+  "contexts": ["Param", "Params"],
+  "returnType": "java.lang.Process",
+  "license": "Apache 2.0"
+}

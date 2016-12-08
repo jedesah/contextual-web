@@ -1,0 +1,23 @@
+{
+  "ivy": {
+    "artifact": "com.propensive",
+    "group": "contextual-examples",
+    "versions": ["1.0"]
+  },
+  "source": "https://github.com/propensive/contextual/",
+  "pkg": "contextual.examples.email",
+  "id": "email",
+  "name": "Email addresses",
+  "ref": "https://www.cs.tut.fi/~jkorpela/rfc/822addr.html",
+  "examples": [
+    "info@scala.world",
+    "john.smith@hotmail.com",
+    "hdr22@clintonemail.com"
+  ],
+  "features": [
+    "Does a simple regular-expression test on the validity of the email",
+    "Does not support substitutions"
+  ],
+  "returnType": "String",
+  "license": "Apache 2.0"
+}

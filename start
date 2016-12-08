@@ -1,0 +1,6 @@
+#!/bin/sh
+docker run --name=contextual-live -p 2481:80 -d contextual-web sbt run
+
+# Inside the console, type
+# /etc/init.d/demon start
+# Ctrl+P Ctrl+Q

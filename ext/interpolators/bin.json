@@ -1,0 +1,23 @@
+{
+  "ivy": {
+    "artifact": "com.propensive",
+    "group": "contextual-examples",
+    "versions": ["1.0"]
+  },
+  "source": "https://github.com/propensive/contextual/",
+  "pkg": "contextual.examples.binary",
+  "id": "bin",
+  "name": "Binary Arrays of Bytes",
+  "examples": [
+    "01010100010101101010010010101100",
+    "10010110"
+  ],
+  "features": [
+    "Parses binary data",
+    "Checks data is an exact number of bytes long",
+    "Optimized construction of a new array without any heap allocation",
+    "Does not support substitutions"
+  ],
+  "returnType": "Array[Byte]",
+  "license": "Apache 2.0"
+}
