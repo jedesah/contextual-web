@@ -4,7 +4,7 @@
     "group": "contextual-examples",
     "versions": ["1.0"]
   },
-  "source": "https://github.com/propensive/contextual/",
+  "source": "https://github.com/propensive/contextual/blob/master/dsls/src/main/scala/contextual/dsls/sh.scala",
   "pkg": "contextual.examples.sh",
   "id": "sh",
   "name": "Shell commands",

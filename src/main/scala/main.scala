@@ -47,6 +47,24 @@ object Main {
       case Path(^ / "images" / f) if f.endsWith("jpg") =>
         implicit val mime = MimeTypes.`image/jpeg`
         uri"classpath:images/$f".input[Byte]
+      case request if request.path.toString.startsWith("/_/api/") => try {
+        implicit val mime = request.path.toString.split("\\.").last match {
+          case "html" => MimeTypes.`text/html`
+          case "css" => MimeTypes.`text/css`
+          case "js" => MimeTypes.`text/javascript`
+          case "gif" => MimeTypes.`image/gif`
+          case "png" => MimeTypes.`image/png`
+          case "jpg" => MimeTypes.`image/jpeg`
+          case "svg" => MimeTypes.`image/svg+xml`
+          case _ => MimeTypes.`application/octet-stream`
+        }
+
+        uri"classpath:api/${request.path.toString.drop(7)}".input[Byte]
+      } catch {
+        case e: Exception =>
+          e.printStackTrace()
+          throw e
+        }
       case _ => Contextual.handle(r)
     }
   }
@@ -108,15 +126,16 @@ object Contextual {
       @import url('https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700|Roboto|Droid+Sans+Mono');
       $Body { padding: 0; margin: 0; font-family: Roboto; }
       .header { background: url(/images/contextual.jpg); width: 100vw; padding: 20vw 0 0 0;
-          color: white; margin: 0; background-size: cover; transition: all ease-in-out 1s; }
+          color: white; margin: 0; background-size: cover;
+          max-height: 30vh; overflow: hidden; }
       a:link, a:visited, a:hover, a:active { color: #3d9930; text-decoration: none; }
       a:hover { text-decoration: underline; }
       $H1 { font-family: 'PT Serif'; font-size: 6vw; font-weight: 400;
           text-shadow: 0 0 1vw rgba(0, 0, 0, 0.8); margin: 0 0 0 10vw;
-          transition: all ease-in-out 1s; }
+          }
       $H2 { font-family: 'PT Serif'; font-size: 2vw; font-weight: 400; font-style: italic;
           text-shadow: 0 0 1vw rgba(0, 0, 0, 0.8); margin: 0 0 0 0; padding: 1vw 0 1vw 10vw;
-          transition: all ease-in-out 1s; background-color: rgba(0, 0, 0, 0.25);
+          background-color: rgba(0, 0, 0, 0.25);
           box-shadow: 0 0 2vw rgba(255, 255, 255, 0.5); }
       $H3 { font-family: 'PT Serif'; font-size: 24px; color: #d7182a; font-weight: 400;
           margin: 1.2em 0 0.6em; }
@@ -127,9 +146,12 @@ object Contextual {
           border-width: 0.35em 0 0.35em 0.45em; display: block; height: 0; width: 0;
           left: -1em; top: 0.9em; position: relative; }
       .page { width: 80vw; max-width: 40em; margin: 5vw auto 5vw auto;
-          transition: all ease-in-out 1s; }
+          }
       $P { text-align: justify; font-weight: 300; line-height: 1.8em; font-size: 15px; }
-      $Code, $Pre { font-family: 'Droid Sans Mono'; font-size-adjust: 0.52; font-size: 15px; }
+      .tags a { background-color: #3d9930; text-decoration: none; border-radius: 0.4em; padding: 0.2em 0.5em; line-height: 2em; color: white; opacity: 0.5;  }
+      .tags a:hover { background-color: #3d9930; } 
+      
+      $Code, $Pre { font-family: 'Droid Sans Mono'; font-size-adjust: 0.52; font-size: 15px; clear: both; }
       $Pre { border: solid 1px #dddddd; background-color: #eeeeee; padding: 4px 12px; }
 			.inset { float: right; width: 24vw; margin: 0 -10vw 1vw 3vw; }
       .inset h3 { background-color: #d7182a; font-weight: bold; color: white; font-size: 1em;
@@ -155,24 +177,35 @@ object Contextual {
         Div(cls = 'inset)(
           H3("Getting started"),
           H4("SBT"),
-          Code(""""com.propensive" %% "contextual" % "1.0""""),
+          Code(""""com.propensive" %% "contextual" % "0.9""""),
           H4("Import"),
           Code("""import contextual._"""),
+          H4("Examples"),
+          Div(cls = 'tags)((Interpolators.index.flatMap { dsl =>
+            List(A(href = ^ / dsl)(Interpolators.all(dsl).name), Span(" "))
+          }): _*),
+          H4("Links"),
           Ul(
-            Li(A(href = ^ / "_" / "tutorial")("Writing your first contextual interpolator"))
+            Li(A(href = uri"https://github.com/propensive/contextual")("Source on GitHub")),
+            Li(A(href = uri"https://gitter.im/propensive/contextual")("Gitter channel")),
+            Li(A(href = ^ / "_" / "api" / "index.html")("API documentation"))
           )
         ),
         H3("About contextual"),
         P("""
-          Contextual is a Scala library which allows you to define your own string interpolators—prefixes for string literals which determine how they should be interpreted—and to specify what should happen at runtime and compile-time, writing very ordinary user code: no macros.
+          Contextual is a small Scala library which allows you to define your own string interpolators—prefixed string literals like """, Code("""uri"https://google.com""""), """ which determine how they should be evaluated, at runtime and at compile-time, while only writing very ordinary user code: no macros!
         """),
+        P("""Contextual is still very new, so don't expect everything to work perfectly, yet!"""),
         H3("A simple example"),
         P("We can define a simple interpolator for URLs, ", Code("""url"""""), ", like this:"),
         Pre("""
+          |import contextual._
+          |
           |object UrlInterpolator extends Interpolator {
           |  def implementation(ctx: Contextual) = {
-          |    Url.parse(ctx.literals.head)
-          |    ctx.Implementation("")
+          |    val url = ctx.literals.head
+          |    if(!checkValid(url.string)) url.abort(0, "not a valid URL")
+          |    ctx.Implementation(url.string)
           |  }
           |}
           |
@@ -195,11 +228,11 @@ object Contextual {
         H4("Interpolators"),
         P("""
           An """, Code("Interpolator"), """ defines how an interpolated string should be understood at
-          both compile-time, and runtime. These are similar operations, but differ in
-          what is known about the expressions being interpolated amongst the fixed parts of
-          the interpolated string: at runtime we have the evaluated values being
-          substituted, whereas at compile-time the values are unknown, but we instead
-          have access to certain meta-information about the substitutions.
+          both compile-time, and runtime. Often, these are similar operations, but differ in
+          how much is known about the holes; the expressions being interpolated amongst the fixed parts of
+          the interpolated string. At runtime we have the evaluated substituted values 
+          available, whereas at compile-time the values are unknown, though we do instead
+          have access to certain meta-information about the substitutions, which allows some useful constraints to be placed on substitutions.
         """),
         H4("The ", Code("implementation"), " method"),
         P(Code("Interpolator"), "s have one abstract method which needs implementing to provide all he compile-time and runtime functionality:"),
@@ -220,7 +253,9 @@ object Contextual {
           H4("SBT"),
           Code(interpolator.ivy.toString),
           H4("License"),
-          "Apache 2.0"
+          "Apache 2.0",
+          H4("Source code"),
+          A(href = Http.parse(interpolator.source))(interpolator.source)
         ),
         H3(s"${interpolator.name} (", Code(id), """"")"""),
         Div(
@@ -238,7 +273,17 @@ object Contextual {
             Pre("import "+interpolator.pkg+"._\n"+interpolator.id+"\"\"\""+eg+"\"\"\"")
           }): _*
         ),
-        H4("References")
+        interpolator.ref match {
+          case Some(ref) => Div(
+            H4("References"),
+            Ul(
+              Li(
+                A(href = Http.parse(ref))(ref)
+              )
+            )
+          )
+          case None => Div("")
+        }
       )
   }
 
