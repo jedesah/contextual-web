@@ -177,7 +177,7 @@ object Contextual {
         Div(cls = 'inset)(
           H3("Getting started"),
           H4("SBT"),
-          Code(""""com.propensive" %% "contextual" % "0.9""""),
+          Code(""""com.propensive" %% "contextual" % "0.12""""),
           H4("Import"),
           Code("""import contextual._"""),
           H4("Examples"),

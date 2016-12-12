@@ -88,7 +88,7 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li class="current-entities indented1">
-                        <a class="object" href="Context$.html" title=""></a>
+                        <span class="separator"></span>
                         <a class="trait" href="Context.html" title="A Context describes the nature of the position in an interpolated string where a
 substitution is made, and determines how values of a particular type should be interpreted
 in the given position."></a>
@@ -98,6 +98,12 @@ in the given position.">
                           Context
                         </a>
                       </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="trait" href="ContextualParts.html" title=""></a>
+                        <a href="ContextualParts.html" title="">
+                          ContextualParts
+                        </a>
+                      </li><li class="current-entities indented1">
                         <a class="object" href="Embedded$.html" title=""></a>
                         <a class="class" href="Embedded.html" title=""></a>
                         <a href="Embedded.html" title="">
@@ -105,9 +111,9 @@ in the given position.">
                         </a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="class" href="Handler.html" title=""></a>
-                        <a href="Handler.html" title="">
-                          Handler
+                        <a class="class" href="Embedder.html" title=""></a>
+                        <a href="Embedder.html" title="">
+                          Embedder
                         </a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
@@ -232,6 +238,24 @@ in the given position." href="Context.html">
       <p class="shortcomment cmt">A <code>Context</code> describes the nature of the position in an interpolated string where a
 substitution is made, and determines how values of a particular type should be interpreted
 in the given position.</p>
+    </li><li name="contextual.ContextualParts" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="ContextualPartsextendsAnyRef"></a><a id="ContextualParts:ContextualParts"></a>
+      <span class="permalink">
+      <a href="../contextual/index.html#ContextualPartsextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ContextualParts.html">
+              <span class="name">ContextualParts</span>
+            </a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      
+      
     </li><li name="contextual.Embedded" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="Embedded[R,I&lt;:contextual.Interpolator]extendsAnyRef"></a><a id="Embedded[R,I&lt;:Interpolator]:Embedded[R,I]"></a>
       <span class="permalink">
@@ -250,10 +274,10 @@ in the given position.</p>
       </span>
       
       
-    </li><li name="contextual.Handler" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Handler[CC&lt;:(contextual.Context,contextual.Context),V,R,I&lt;:contextual.Interpolator]extendsAnyRef"></a><a id="Handler[CC&lt;:(Context,Context),V,R,I&lt;:Interpolator]:Handler[CC,V,R,I]"></a>
+    </li><li name="contextual.Embedder" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Embedder[CC&lt;:(contextual.Context,contextual.Context),V,R,I&lt;:contextual.Interpolator]extendsAnyRef"></a><a id="Embedder[CC&lt;:(Context,Context),V,R,I&lt;:Interpolator]:Embedder[CC,V,R,I]"></a>
       <span class="permalink">
-      <a href="../contextual/index.html#Handler[CC&lt;:(contextual.Context,contextual.Context),V,R,I&lt;:contextual.Interpolator]extendsAnyRef" title="Permalink">
+      <a href="../contextual/index.html#Embedder[CC&lt;:(contextual.Context,contextual.Context),V,R,I&lt;:contextual.Interpolator]extendsAnyRef" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -262,8 +286,8 @@ in the given position.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="Handler.html">
-              <span class="name">Handler</span>
+        <a title="" href="Embedder.html">
+              <span class="name">Embedder</span>
             </a><span class="tparams">[<span name="CC">CC &lt;: (<a href="Context.html" class="extype" name="contextual.Context">Context</a>, <a href="Context.html" class="extype" name="contextual.Context">Context</a>)</span>, <span name="V">V</span>, <span name="R">R</span>, <span name="I">I &lt;: <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
       </span>
       
@@ -287,9 +311,9 @@ in the given position.</p>
       
       <p class="shortcomment cmt">Represents a compile-time failure in interpolation.</p>
     </li><li name="contextual.Interpolator" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="InterpolatorextendsAnyRef"></a><a id="Interpolator:Interpolator"></a>
+      <a id="InterpolatorextendsContextualParts"></a><a id="Interpolator:Interpolator"></a>
       <span class="permalink">
-      <a href="../contextual/index.html#InterpolatorextendsAnyRef" title="Permalink">
+      <a href="../contextual/index.html#InterpolatorextendsContextualParts" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -301,7 +325,7 @@ in the given position.</p>
         <a title="An Interpolator defines the compile-time and runtime behavior when interpreting an
 interpolated string." href="Interpolator.html">
               <span class="name">Interpolator</span>
-            </a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+            </a><span class="result"> extends <a href="ContextualParts.html" class="extype" name="contextual.ContextualParts">ContextualParts</a></span>
       </span>
       
       <p class="shortcomment cmt">An <code>Interpolator</code> defines the compile-time and runtime behavior when interpreting an
@@ -358,25 +382,7 @@ the value should change the <code>Context</code> in the interpolated string.</p>
         <div class="values members">
               <h3>Value Members</h3>
               <ol>
-                <li name="contextual.Context" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Context"></a><a id="Context:Context"></a>
-      <span class="permalink">
-      <a href="../contextual/index.html#Context" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="Context$.html">
-              <span class="name">Context</span>
-            </a>
-      </span>
-      
-      
-    </li><li name="contextual.Embedded" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+                <li name="contextual.Embedded" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Embedded"></a><a id="Embedded:Embedded"></a>
       <span class="permalink">
       <a href="../contextual/index.html#Embedded" title="Permalink">

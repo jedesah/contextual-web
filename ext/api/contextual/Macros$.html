@@ -90,7 +90,7 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li class="current-entities indented1">
-                        <a class="object" href="Context$.html" title=""></a>
+                        <span class="separator"></span>
                         <a class="trait" href="Context.html" title="A Context describes the nature of the position in an interpolated string where a
 substitution is made, and determines how values of a particular type should be interpreted
 in the given position."></a>
@@ -100,6 +100,12 @@ in the given position.">
                           Context
                         </a>
                       </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="trait" href="ContextualParts.html" title=""></a>
+                        <a href="ContextualParts.html" title="">
+                          ContextualParts
+                        </a>
+                      </li><li class="current-entities indented1">
                         <a class="object" href="Embedded$.html" title=""></a>
                         <a class="class" href="Embedded.html" title=""></a>
                         <a href="Embedded.html" title="">
@@ -107,9 +113,9 @@ in the given position.">
                         </a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="class" href="Handler.html" title=""></a>
-                        <a href="Handler.html" title="">
-                          Handler
+                        <a class="class" href="Embedder.html" title=""></a>
+                        <a href="Embedder.html" title="">
+                          Embedder
                         </a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
@@ -321,9 +327,9 @@ the value should change the Context in the interpolated string.">
               
         </dd></dl></div>
     </li><li name="contextual.Macros#contextual" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="contextual[C&lt;:contextual.Context,P&lt;:contextual.Interpolator{typeCtx=C}](c:scala.reflect.macros.whitebox.Context)(exprs:c.Tree*)(implicitevidence$1:c.WeakTypeTag[P]):c.Tree"></a><a id="contextual[C&lt;:Context,P&lt;:Interpolator{typeCtx=C}](scala.reflect.macros.whitebox.Context)(scala.reflect.macros.whitebox.Context.Tree*)(scala.reflect.macros.whitebox.Context.WeakTypeTag[P]):scala.reflect.macros.whitebox.Context.Tree"></a>
+      <a id="contextual[C&lt;:contextual.Context,I&lt;:contextual.Interpolator{typeCtx=C}](c:scala.reflect.macros.whitebox.Context)(exprs:c.Tree*)(implicitevidence$1:c.WeakTypeTag[I]):c.Tree"></a><a id="contextual[C&lt;:Context,I&lt;:Interpolator{typeCtx=C}](scala.reflect.macros.whitebox.Context)(scala.reflect.macros.whitebox.Context.Tree*)(scala.reflect.macros.whitebox.Context.WeakTypeTag[I]):scala.reflect.macros.whitebox.Context.Tree"></a>
       <span class="permalink">
-      <a href="../contextual/Macros$.html#contextual[C&lt;:contextual.Context,P&lt;:contextual.Interpolator{typeCtx=C}](c:scala.reflect.macros.whitebox.Context)(exprs:c.Tree*)(implicitevidence$1:c.WeakTypeTag[P]):c.Tree" title="Permalink">
+      <a href="../contextual/Macros$.html#contextual[C&lt;:contextual.Context,I&lt;:contextual.Interpolator{typeCtx=C}](c:scala.reflect.macros.whitebox.Context)(exprs:c.Tree*)(implicitevidence$1:c.WeakTypeTag[I]):c.Tree" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -332,7 +338,7 @@ the value should change the Context in the interpolated string.">
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">contextual</span><span class="tparams">[<span name="C">C &lt;: <a href="Context.html" class="extype" name="contextual.Context">Context</a></span>, <span name="P">P &lt;: <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a> { type Ctx = C }</span>]</span><span class="params">(<span name="c">c: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.reflect.macros.whitebox.Context" class="extype" target="_top">scala.reflect.macros.whitebox.Context</a></span>)</span><span class="params">(<span name="exprs">exprs: <span class="extype" name="scala.reflect.macros.Aliases.Tree">scala.reflect.macros.whitebox.Context.Tree</span>*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.macros.Aliases.WeakTypeTag">scala.reflect.macros.whitebox.Context.WeakTypeTag</span>[<span class="extype" name="contextual.Macros.contextual.P">P</span>]</span>)</span><span class="result">: <span class="extype" name="scala.reflect.macros.Aliases.Tree">scala.reflect.macros.whitebox.Context.Tree</span></span>
+        <span class="name">contextual</span><span class="tparams">[<span name="C">C &lt;: <a href="Context.html" class="extype" name="contextual.Context">Context</a></span>, <span name="I">I &lt;: <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a> { type Ctx = C }</span>]</span><span class="params">(<span name="c">c: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.reflect.macros.whitebox.Context" class="extype" target="_top">scala.reflect.macros.whitebox.Context</a></span>)</span><span class="params">(<span name="exprs">exprs: <span class="extype" name="scala.reflect.macros.Aliases.Tree">scala.reflect.macros.whitebox.Context.Tree</span>*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scala.reflect.macros.Aliases.WeakTypeTag">scala.reflect.macros.whitebox.Context.WeakTypeTag</span>[<span class="extype" name="contextual.Macros.contextual.I">I</span>]</span>)</span><span class="result">: <span class="extype" name="scala.reflect.macros.Aliases.Tree">scala.reflect.macros.whitebox.Context.Tree</span></span>
       </span>
       
       

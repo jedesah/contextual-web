@@ -90,9 +90,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li name="contextual.Interpolator" visbl="pub" class="indented2 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="InterpolatorextendsAnyRef"></a><a id="Interpolator:Interpolator"></a>
+      <a id="InterpolatorextendsContextualParts"></a><a id="Interpolator:Interpolator"></a>
       <span class="permalink">
-      <a href="../contextual/index.html#InterpolatorextendsAnyRef" title="Permalink">
+      <a href="../contextual/index.html#InterpolatorextendsContextualParts" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
         <a title="An Interpolator defines the compile-time and runtime behavior when interpreting an
 interpolated string." href="Interpolator.html">
               <span class="name">Interpolator</span>
-            </a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+            </a><span class="result"> extends <a href="ContextualParts.html" class="extype" name="contextual.ContextualParts">ContextualParts</a></span>
       </span>
       
       <p class="shortcomment cmt">An <code>Interpolator</code> defines the compile-time and runtime behavior when interpreting an
@@ -132,9 +132,9 @@ interpolated string.">
                         </a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="class" href="Interpolator$Hole.html" title="A Hole represents all that is known at compile-time about a substitution into an
+                        <a class="class" href="ContextualParts$Hole.html" title="A Hole represents all that is known at compile-time about a substitution into an
 interpolated string."></a>
-                        <a href="Interpolator$Hole.html" title="A Hole represents all that is known at compile-time about a substitution into an
+                        <a href="ContextualParts$Hole.html" title="A Hole represents all that is known at compile-time about a substitution into an
 interpolated string.">
                           Hole
                         </a>
@@ -146,15 +146,33 @@ interpolated string.">
                         </a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="class" href="Interpolator$Literal.html" title="Represents a fixed, constant part of an interpolated string, known at compile-time."></a>
-                        <a href="Interpolator$Literal.html" title="Represents a fixed, constant part of an interpolated string, known at compile-time.">
+                        <a class="class" href="ContextualParts$Literal.html" title="Represents a fixed, constant part of an interpolated string, known at compile-time."></a>
+                        <a href="ContextualParts$Literal.html" title="Represents a fixed, constant part of an interpolated string, known at compile-time.">
                           Literal
                         </a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="trait" href="Interpolator$ParseToken.html" title=""></a>
-                        <a href="Interpolator$ParseToken.html" title="">
-                          ParseToken
+                        <a class="trait" href="ContextualParts$Part.html" title=""></a>
+                        <a href="ContextualParts$Part.html" title="">
+                          Part
+                        </a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="ContextualParts$RuntimePart.html" title=""></a>
+                        <a href="ContextualParts$RuntimePart.html" title="">
+                          RuntimePart
+                        </a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="ContextualParts$StaticPart.html" title=""></a>
+                        <a href="ContextualParts$StaticPart.html" title="">
+                          StaticPart
+                        </a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="ContextualParts$Substitution.html" title=""></a>
+                        <a href="ContextualParts$Substitution.html" title="">
+                          Substitution
                         </a>
                       </li>
               </ul>
@@ -309,9 +327,9 @@ interpolated string.">
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="contextual.Interpolator.Embedding#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply[CC&lt;:(contextual.Context,contextual.Context),R](cases:contextual.Transition[CC,I,R]*):contextual.Handler[CC,I,R,Interpolator.this.type]"></a><a id="apply[CC&lt;:(Context,Context),R](Transition[CC,I,R]*):Handler[CC,I,R,Interpolator.this.type]"></a>
+      <a id="apply[CC&lt;:(contextual.Context,contextual.Context),R](cases:contextual.Transition[CC,I,R]*):contextual.Embedder[CC,I,R,Interpolator.this.type]"></a><a id="apply[CC&lt;:(Context,Context),R](Transition[CC,I,R]*):Embedder[CC,I,R,Interpolator.this.type]"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Embedding.html#apply[CC&lt;:(contextual.Context,contextual.Context),R](cases:contextual.Transition[CC,I,R]*):contextual.Handler[CC,I,R,Interpolator.this.type]" title="Permalink">
+      <a href="../contextual/Interpolator$Embedding.html#apply[CC&lt;:(contextual.Context,contextual.Context),R](cases:contextual.Transition[CC,I,R]*):contextual.Embedder[CC,I,R,Interpolator.this.type]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -320,7 +338,7 @@ interpolated string.">
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="CC">CC &lt;: (<a href="Context.html" class="extype" name="contextual.Context">Context</a>, <a href="Context.html" class="extype" name="contextual.Context">Context</a>)</span>, <span name="R">R</span>]</span><span class="params">(<span name="cases">cases: <a href="Transition.html" class="extype" name="contextual.Transition">Transition</a>[<span class="extype" name="contextual.Interpolator.Embedding.apply.CC">CC</span>, <span class="extype" name="contextual.Interpolator.Embedding.I">I</span>, <span class="extype" name="contextual.Interpolator.Embedding.apply.R">R</span>]*</span>)</span><span class="result">: <a href="Handler.html" class="extype" name="contextual.Handler">Handler</a>[<span class="extype" name="contextual.Interpolator.Embedding.apply.CC">CC</span>, <span class="extype" name="contextual.Interpolator.Embedding.I">I</span>, <span class="extype" name="contextual.Interpolator.Embedding.apply.R">R</span>, <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a>.this.type]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="CC">CC &lt;: (<a href="Context.html" class="extype" name="contextual.Context">Context</a>, <a href="Context.html" class="extype" name="contextual.Context">Context</a>)</span>, <span name="R">R</span>]</span><span class="params">(<span name="cases">cases: <a href="Transition.html" class="extype" name="contextual.Transition">Transition</a>[<span class="extype" name="contextual.Interpolator.Embedding.apply.CC">CC</span>, <span class="extype" name="contextual.Interpolator.Embedding.I">I</span>, <span class="extype" name="contextual.Interpolator.Embedding.apply.R">R</span>]*</span>)</span><span class="result">: <a href="Embedder.html" class="extype" name="contextual.Embedder">Embedder</a>[<span class="extype" name="contextual.Interpolator.Embedding.apply.CC">CC</span>, <span class="extype" name="contextual.Interpolator.Embedding.I">I</span>, <span class="extype" name="contextual.Interpolator.Embedding.apply.R">R</span>, <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a>.this.type]</span>
       </span>
       
       
