@@ -4,7 +4,7 @@
     "group": "contextual-examples",
     "versions": ["0.9"]
   },
-  "source": "https://github.com/propensive/contextual/blob/master/dsls/src/main/scala/contextual/dsls/regex.scala",
+  "source": "https://github.com/propensive/contextual/blob/master/examples/src/main/scala/contextual/examples/regex.scala",
   "pkg": "contextual.examples.regex",
   "id": "regex",
   "name": "Regular Expression",

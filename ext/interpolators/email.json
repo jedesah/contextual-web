@@ -4,7 +4,7 @@
     "group": "contextual-examples",
     "versions": ["0.9"]
   },
-  "source": "https://github.com/propensive/contextual/blob/master/dsls/src/main/scala/contextual/dsls/email.scala",
+  "source": "https://github.com/propensive/contextual/blob/master/examples/src/main/scala/contextual/examples/email.scala",
   "pkg": "contextual.examples.email",
   "id": "email",
   "name": "Email addresses",

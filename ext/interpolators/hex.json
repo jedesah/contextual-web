@@ -4,7 +4,7 @@
     "group": "contextual-examples",
     "versions": ["0.9"]
   },
-  "source": "https://github.com/propensive/contextual/blob/master/dsls/src/main/scala/contextual/dsls/hex.scala",
+  "source": "https://github.com/propensive/contextual/blob/master/examples/src/main/scala/contextual/examples/hex.scala",
   "pkg": "contextual.examples.hex",
   "id": "hex",
   "name": "Hexadecimal byte arrays",
