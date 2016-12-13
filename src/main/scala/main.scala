@@ -178,7 +178,7 @@ object Contextual {
         Div(cls = 'inset)(
           H3("Getting started"),
           H4("SBT"),
-          Code(""""com.propensive" %% "contextual" % "0.12""""),
+          Code(""""com.propensive" %% "contextual" % "0.14""""),
           H4("Import"),
           Code("""import contextual._"""),
           H4("Examples"),
@@ -203,10 +203,15 @@ object Contextual {
           |import contextual._
           |
           |object UrlInterpolator extends Interpolator {
-          |  def implementation(ctx: Contextual) = {
+          |  
+          |  def evaluate(ctx: Contextual[RuntimePart]) =
+          |    Url(ctx.literals.head)
+          |
+          |  def implement(ctx: Contextual[StaticPart]) = {
           |    val url = ctx.literals.head
           |    if(!checkValid(url.string)) url.abort(0, "not a valid URL")
-          |    ctx.Implementation(url.string)
+          |
+          |    ctx.doEvaluation(contexts = Nil)
           |  }
           |}
           |
@@ -235,14 +240,15 @@ object Contextual {
           available, whereas at compile-time the values are unknown, though we do instead
           have access to certain meta-information about the substitutions, which allows some useful constraints to be placed on substitutions.
         """),
-        H4("The ", Code("implementation"), " method"),
+        H4("The ", Code("implement"), " method"),
         P(Code("Interpolator"), "s have one abstract method which needs implementing to provide all he compile-time and runtime functionality:"),
         Pre("def implementation(ctx: Contextual): ctx.Implementation"),
-        P(""),
+        H4("The ", Code("evaluate"), " method"),
+        P("""The runtime implementation of the interpolator should be provided through an implementation of """, Code("evaluate"), """. This method is not part of subtyping API, so does not have to conform to an exact shape; it will be called with a single ", Code("Contextual[RuntimePart]"), """ parameter whenever an interpolator is expanded, but may take type parameters or implicit parameters (as long as these can be inferred), and may return a value of any type."""),
         H4("The ", Code("Contextual"), " type"),
-        P("""We represent the context of an interpolated string with the """, Code("Contextual"), """ type. It provides access to the fixed literal parts of the interpolated string, metadata about the holes, and the means to report errors during compilation, and to construct runtime implementations of the interpolated string."""),
-        P("""Perhaps the most useful method of """, Code("Contextual"), """ is """, Code("parts"), """ which gives a sequence of tokens representing each section of the interpolated string: alternating """, Code("Literal"), " and ", Code("Hole"), """ objects which we can process to analyze the interpolated string.."""),
-        H4("Attaching a prefix"),
+        P("""We represent the context of an interpolated string with the """, Code("Contextual"), """ type at both compile-time and runtime. During compilation, it provides access to the fixed literal parts of the interpolated string, metadata about the holes, and the means to report compile errors, and to construct runtime implementations of the interpolated string. At runtime, it additionally provides the actual values substituted into the interpolated string."""),
+        P("""Perhaps the most useful method of """, Code("Contextual"), """ is """, Code("parts"), """ which gives the sequence of parts representing each section of the interpolated string: alternating """, Code("Literal"), " and ", Code("Hole"), """ objects which we can process to analyze the interpolated string. At runtime, """, Code("parts"), """ will provide alternating """, Code("Literal"), " and ", Code("Substitution"), """ objects."""),
+        H4("Attaching the interpolator to a prefix"),
         P("""In order to make a new string interpolator available through a prefix on a string, the Scala compiler needs to be able to "see" that prefix on Scala's built-in """, Code("StringContext"), """ object. This is very easily done by specifying a new """, Code("Prefix"), """ value with the desired name on an implicit class that wraps """, Code("StringContext"), """."""),
         P("""
           The """, Code("Prefix"), """ constructor takes only two parameters: the """, Code("Interpolator"), """ object (and it must be an """, B("object"), """, otherwise the macro will not be able to invoke it at compile time), and the """, Code("StringContext"), """ instance that we are extending.""")
