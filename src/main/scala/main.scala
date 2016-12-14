@@ -293,7 +293,7 @@ object Contextual {
         Div(
           "",
           (interpolator.examples.map { case Example(src, res) =>
-            Pre("> import "+interpolator.pkg+"._\n> "+interpolator.id+"\"\"\""+src+"\"\"\"\nres: ${interpolator.returnType} = $res")
+            Pre("> import "+interpolator.pkg+"._\n> "+interpolator.id+"\"\"\""+src+"\"\"\"\nres: "+interpolator.returnType+s" = $res")
           }): _*
         ),
         interpolator.ref match {
