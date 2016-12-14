@@ -9,8 +9,8 @@
   "id": "bin",
   "name": "Binary Arrays of Bytes",
   "examples": [
-    "01010100010101101010010010101100",
-    "10010110"
+    { "source": "01010100010101101010010010101100", "result": "Array(84, 86, -92 -84)" },
+    { "source": "10010110", "result": "Array(-106)" }
   ],
   "features": [
     "Parses binary data",

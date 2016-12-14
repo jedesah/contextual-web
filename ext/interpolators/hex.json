@@ -9,9 +9,9 @@
   "id": "hex",
   "name": "Hexadecimal byte arrays",
   "examples": [
-    "000102030405060708090a0b0c0d0e0f",
-    "cafebabe",
-    "2a"
+    { "source": "000102030405060708090a0b0c0d0e0f", "result": "Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)" },
+    { "source": "cafebabe", "result": "Array(-54, -2, -70, -66)" },
+    { "source": "2a", "result": "Array(42)" }
   ],
   "features": [
     "Parses hexadecimal data",

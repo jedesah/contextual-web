@@ -10,14 +10,14 @@
   "name": "Email addresses",
   "ref": "https://www.cs.tut.fi/~jkorpela/rfc/822addr.html",
   "examples": [
-    "info@scala.world",
-    "john.smith@hotmail.com",
-    "hdr22@clintonemail.com"
+    { "source": "info@scala.world", "result": "Email(info@scala.world)" },
+    { "source": "john.smith@hotmail.com", "result": "Email(john.smith@hotmail.com)" },
+    { "source": "hdr22@clintonemail.com", "result": "Email(hdr22@clintonemail.com)" }
   ],
   "features": [
     "Does a simple regular-expression test on the validity of the email",
     "Does not support substitutions"
   ],
-  "returnType": "String",
+  "returnType": "Email",
   "license": "Apache 2.0"
 }

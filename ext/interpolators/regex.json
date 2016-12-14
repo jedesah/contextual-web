@@ -10,8 +10,8 @@
   "name": "Regular Expression",
   "ref": "http://docs.oracle.com/javase/6/docs/api/java/util/regex/Pattern.html",
   "examples": [
-    "^[0-9]{1,13}(\\.[0-9]*)?$",
-    "^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$"
+    { "source": "^[0-9]{1,13}(\\.[0-9]*)?$$", "result": "^[0-9]{1,13}(\\.[0-9]*)?$" },
+    { "source": "^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$$", "result": "^\\(?([0-9]{3})\\)?[-.\\s]?([0-9]{3})[-.\\s]?([0-9]{4})$" }
   ],
   "features": [
     "Checks that regular expressions compile",

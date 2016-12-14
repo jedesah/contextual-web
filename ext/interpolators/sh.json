@@ -9,9 +9,9 @@
   "id": "sh",
   "name": "Shell commands",
   "examples": [
-    "grep -r 'Hello World' .",
-    "wc -l $file",
-    "git commit --message='Automated: $msg'"
+    { "source": "grep -r 'Hello World' .", "result": "Process(\"grep\", \"-r\", \"Hello World\")" },
+    { "source": "wc -l $file", "result": "Process(\"wc\", \"-l\", file)" },
+    { "source": "git commit --message='Automated: $msg'", "result": "Process(\"git\", \"commit\", s\"--message=Automated $msg\")" }
   ],
   "features": [
     "Parses shell commands into parameters",
@@ -19,6 +19,6 @@
     "Allows embedding of parameters"
   ],
   "contexts": ["InSingleQuotes", "InDoubleQuotes", "NewParam", "InUnquotedParam"],
-  "returnType": "java.lang.Process",
+  "returnType": "Process",
   "license": "Apache 2.0"
 }

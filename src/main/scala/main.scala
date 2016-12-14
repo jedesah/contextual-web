@@ -202,16 +202,18 @@ object Contextual {
         Pre("""
           |import contextual._
           |
+          |case class Url(url: String)
+          |
           |object UrlInterpolator extends Interpolator {
           |  
-          |  def evaluate(ctx: Contextual[RuntimePart]) =
+          |  def evaluate(ctx: Contextual[RuntimePart]): Url =
           |    Url(ctx.literals.head)
           |
-          |  def implement(ctx: Contextual[StaticPart]) = {
+          |  def contextualize(ctx: Contextual[StaticPart]): Seq[Ctx] = {
           |    val url = ctx.literals.head
           |    if(!checkValid(url.string)) url.abort(0, "not a valid URL")
           |
-          |    ctx.doEvaluation(contexts = Nil)
+          |    Nil
           |  }
           |}
           |
@@ -240,9 +242,9 @@ object Contextual {
           available, whereas at compile-time the values are unknown, though we do instead
           have access to certain meta-information about the substitutions, which allows some useful constraints to be placed on substitutions.
         """),
-        H4("The ", Code("implement"), " method"),
-        P(Code("Interpolator"), "s have one abstract method which needs implementing to provide all he compile-time and runtime functionality:"),
-        Pre("def implementation(ctx: Contextual): ctx.Implementation"),
+        H4("The ", Code("contextualize"), " method"),
+        P(Code("Interpolator"), "s have one abstract method which needs implementing to provide any compile-time checking and parsing functionality:"),
+        Pre("def contextualize(ctx: Contextual): Seq[Ctx]"),
         H4("The ", Code("evaluate"), " method"),
         P("""The runtime implementation of the interpolator should be provided through an implementation of """, Code("evaluate"), """. This method is not part of subtyping API, so does not have to conform to an exact shape; it will be called with a single """, Code("Contextual[RuntimePart]"), """ parameter whenever an interpolator is expanded, but may take type parameters or implicit parameters (as long as these can be inferred), and may return a value of any type."""),
         H4("The ", Code("Contextual"), " type"),
@@ -268,6 +270,14 @@ object Contextual {
             Li(
               A(href = Http.parse(interpolator.source))("GitHub")
             )
+          ),
+          H4("Defined contexts"),
+          if(interpolator.contexts.isEmpty) P("None") else Ul("",
+            interpolator.contexts.map { ctx => Li(Code(ctx)) }
+          ),
+          H4("Predefined substitution types"),
+          if(interpolator.substitutionTypes.isEmpty) P("None") else Ul("",
+            interpolator.substitutionTypes.map { ctx => Li(Code(ctx)) }
           )
         ),
         H3(s"${interpolator.name} (", Code(id), """"")"""),
@@ -282,8 +292,8 @@ object Contextual {
         H4("Examples"),
         Div(
           "",
-          (interpolator.examples.map { eg =>
-            Pre("import "+interpolator.pkg+"._\n"+interpolator.id+"\"\"\""+eg+"\"\"\"")
+          (interpolator.examples.map { case Example(src, res) =>
+            Pre("> import "+interpolator.pkg+"._\n> "+interpolator.id+"\"\"\""+src+"\"\"\"\nres: ${interpolator.returnType} = $res")
           }): _*
         ),
         interpolator.ref match {
@@ -299,7 +309,6 @@ object Contextual {
         }
       )
   }
-
 }
 
 object Interpolators {
@@ -310,8 +319,10 @@ object Interpolators {
   }.toMap
 }
 
+case class Example(source: String, result: String)
+
 case class IvyRef(artifact: String, group: String, versions: List[String]) {
   override def toString = s""""$artifact" %% "$group" % "${versions.last}""""
 }
-case class Interpolator(id: String, name: String, pkg: String, examples: List[String], ivy: IvyRef, source: String, ref: Option[String], features: List[String], returnType: String, license: String, contexts: List[String] = Nil)
+case class Interpolator(id: String, name: String, pkg: String, examples: List[Example], ivy: IvyRef, source: String, ref: Option[String], features: List[String], returnType: String, license: String, contexts: List[String] = Nil, substitutionTypes: List[String] = Nil)
 
