@@ -90,6 +90,16 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li class="current-entities indented1">
+                        <a class="object" href="Case$.html" title="Factory object for creating Cases."></a>
+                        <a class="class" href="Case.html" title="A Case specifies for a particular Context how a value of type Value should
+be converted into the appropriate Input type to an Interpolator, and how the
+application of the value should change the Context in the interpolated string."></a>
+                        <a href="Case.html" title="A Case specifies for a particular Context how a value of type Value should
+be converted into the appropriate Input type to an Interpolator, and how the
+application of the value should change the Context in the interpolated string.">
+                          Case
+                        </a>
+                      </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="trait" href="Context.html" title="A Context describes the nature of the position in an interpolated string where a
 substitution is made, and determines how values of a particular type should be interpreted
@@ -101,20 +111,16 @@ in the given position.">
                         </a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="class" href="Embedder.html" title="An Embedder defines, for an Interpolator, I, a type V should be converted to the
-common input type 'R', when substituted into different context positions."></a>
-                        <a href="Embedder.html" title="An Embedder defines, for an Interpolator, I, a type V should be converted to the
-common input type 'R', when substituted into different context positions.">
+                        <a class="class" href="Embedder.html" title="An Embedder defines, for an Interpolator, InterpolatorType, a type Value should
+be converted to the common input type Input, when substituted into different context
+positions."></a>
+                        <a href="Embedder.html" title="An Embedder defines, for an Interpolator, InterpolatorType, a type Value should
+be converted to the common input type Input, when substituted into different context
+positions.">
                           Embedder
                         </a>
                       </li><li class="current-entities indented1">
-                        <span class="separator"></span>
-                        <a class="class" href="InterpolationError.html" title="Represents a compile-time failure in interpolation."></a>
-                        <a href="InterpolationError.html" title="Represents a compile-time failure in interpolation.">
-                          InterpolationError
-                        </a>
-                      </li><li class="current-entities indented1">
-                        <a class="object" href="Interpolator$.html" title=""></a>
+                        <a class="object" href="Interpolator$.html" title="Companion object for the Interpolator, containing related definitions."></a>
                         <a class="trait" href="Interpolator.html" title="An Interpolator defines the compile-time and runtime behavior when interpreting an
 interpolated string."></a>
                         <a href="Interpolator.html" title="An Interpolator defines the compile-time and runtime behavior when interpreting an
@@ -123,27 +129,17 @@ interpolated string.">
                         </a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="object" href="Macros$.html" title="Object containing the main macro providing Contextual's functionality."></a>
-                        <a href="Macros$.html" title="Object containing the main macro providing Contextual's functionality.">
+                        <a class="class" href="Macros.html" title="Macro bundle class containing the main macro providing Contextual's functionality."></a>
+                        <a href="Macros.html" title="Macro bundle class containing the main macro providing Contextual's functionality.">
                           Macros
                         </a>
                       </li><li class="current-entities indented1">
-                        <a class="object" href="Prefix$.html" title=""></a>
-                        <a class="class" href="" title="A Prefix represents the attachment of an Interpolator to a StringContext, typically
-using an implicit class."></a>
-                        <a href="" title="A Prefix represents the attachment of an Interpolator to a StringContext, typically
-using an implicit class.">
+                        <a class="object" href="Prefix$.html" title="Companion and factory object for the Prefix class."></a>
+                        <a class="class" href="" title="A Prefix represents the attachment of an Interpolator to a scala.StringContext,
+typically using an implicit class."></a>
+                        <a href="" title="A Prefix represents the attachment of an Interpolator to a scala.StringContext,
+typically using an implicit class.">
                           Prefix
-                        </a>
-                      </li><li class="current-entities indented1">
-                        <a class="object" href="Transition$.html" title="Factory object for creating Transitions."></a>
-                        <a class="class" href="Transition.html" title="A Transition specifies for a particular Context how a value of type Value should be
-converted into the appropriate Input type to an Interpolator, and how the application of
-the value should change the Context in the interpolated string."></a>
-                        <a href="Transition.html" title="A Transition specifies for a particular Context how a value of type Value should be
-converted into the appropriate Input type to an Interpolator, and how the application of
-the value should change the Context in the interpolated string.">
-                          Transition
                         </a>
                       </li>
               </ul>
@@ -166,18 +162,19 @@ the value should change the Context in the interpolated string.">
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">final </span>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">Prefix</span><span class="tparams">[<span name="C">C &lt;: <a href="Context.html" class="extype" name="contextual.Context">Context</a></span>, <span name="P">P &lt;: <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a> { type Ctx = C }</span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+        <span class="name">Prefix</span><span class="tparams">[<span name="PrefixContextType">PrefixContextType &lt;: <a href="Context.html" class="extype" name="contextual.Context">Context</a></span>, <span name="InterpolatorType">InterpolatorType &lt;: <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a> { type ContextType = PrefixContextType }</span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A <code>Prefix</code> represents the attachment of an <code>Interpolator</code> to a <code>StringContext</code>, typically
-using an implicit class. It has only a single method, <code>apply</code>, with a signature that's
-appropriate for fitting the shape of a desugared interpolated string application.</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A <a href="" class="extype" name="contextual.Prefix">Prefix</a> represents the attachment of an <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a> to a <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.StringContext" class="extype" target="_top">scala.StringContext</a>,
+typically using an implicit class. It has only a single method, <a href="#apply(expressions:contextual.Interpolator.Embedded[Prefix.this.interpolator.Input,Prefix.this.interpolator.type]*):Any" class="extmbr" name="contextual.Prefix#apply">apply</a>, with a signature
+that's appropriate for fitting the shape of a desugared interpolated string application.
+</p></div><dl class="paramcmts block"><dt class="tparam">PrefixContextType</dt><dd class="cmt"><p>the context inferred from <code>interpolator</code>'s type member</p></dd><dt class="tparam">InterpolatorType</dt><dd class="cmt"><p>the singleton type of the <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a></p></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -227,10 +224,10 @@ appropriate for fitting the shape of a desugared interpolated string application
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="contextual.Prefix#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(interpolator:P,parts:Seq[String]):contextual.Prefix[C,P]"></a><a id="&lt;init&gt;:Prefix[C,P]"></a>
+              <ol><li name="contextual.Prefix#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(interpolator:InterpolatorType,parts:Seq[String]):contextual.Prefix[PrefixContextType,InterpolatorType]"></a><a id="&lt;init&gt;:Prefix[PrefixContextType,InterpolatorType]"></a>
       <span class="permalink">
-      <a href="../contextual/Prefix.html#&lt;init&gt;(interpolator:P,parts:Seq[String]):contextual.Prefix[C,P]" title="Permalink">
+      <a href="../contextual/Prefix.html#&lt;init&gt;(interpolator:InterpolatorType,parts:Seq[String]):contextual.Prefix[PrefixContextType,InterpolatorType]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -239,10 +236,11 @@ appropriate for fitting the shape of a desugared interpolated string application
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Prefix</span><span class="params">(<span name="interpolator">interpolator: <span class="extype" name="contextual.Prefix.P">P</span></span>, <span name="parts">parts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span>
+        <span class="name">Prefix</span><span class="params">(<span name="interpolator">interpolator: <span class="extype" name="contextual.Prefix.InterpolatorType">InterpolatorType</span></span>, <span name="parts">parts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span>
       </span>
       
-      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">interpolator</dt><dd class="cmt"><p>the <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a> object to bind to this prefix</p></dd><dt class="param">parts</dt><dd class="cmt"><p>a sequence of the literal parts of the interpolated string, taken from the
+<code>parts</code> value of the <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.StringContext" class="extype" target="_top">scala.StringContext</a></p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -302,9 +300,9 @@ appropriate for fitting the shape of a desugared interpolated string application
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="contextual.Prefix#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply(exprs:contextual.Interpolator.Embedded[Prefix.this.interpolator.Inputs,Prefix.this.interpolator.type]*):Any"></a><a id="apply(Embedded[P.Inputs,interpolator.type]*):Any"></a>
+      <a id="apply(expressions:contextual.Interpolator.Embedded[Prefix.this.interpolator.Input,Prefix.this.interpolator.type]*):Any"></a><a id="apply(Embedded[InterpolatorType.Input,interpolator.type]*):Any"></a>
       <span class="permalink">
-      <a href="../contextual/Prefix.html#apply(exprs:contextual.Interpolator.Embedded[Prefix.this.interpolator.Inputs,Prefix.this.interpolator.type]*):Any" title="Permalink">
+      <a href="../contextual/Prefix.html#apply(expressions:contextual.Interpolator.Embedded[Prefix.this.interpolator.Input,Prefix.this.interpolator.type]*):Any" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -313,15 +311,17 @@ appropriate for fitting the shape of a desugared interpolated string application
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="exprs">exprs: <a href="Interpolator$$Embedded.html" class="extype" name="contextual.Interpolator.Embedded">Embedded</a>[<span class="extype" name="contextual.Interpolator.Parts.Inputs">P.Inputs</span>, <span class="extype" name="contextual.Prefix.interpolator">interpolator</span>.type]*</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Any" class="extype" target="_top">Any</a></span>
+        <span class="name">apply</span><span class="params">(<span name="expressions">expressions: <a href="Interpolator$$Embedded.html" class="extype" name="contextual.Interpolator.Embedded">Embedded</a>[<span class="extype" name="contextual.Interpolator.Input">InterpolatorType.Input</span>, <span class="extype" name="contextual.Prefix.interpolator">interpolator</span>.type]*</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Any" class="extype" target="_top">Any</a></span>
       </span>
       
-      <p class="shortcomment cmt">The <code>apply</code> method is typically invoked as a result of the desugaring of a StringContext
-during parsing in Scalac.</p><div class="fullcomment"><div class="comment cmt"><p>The <code>apply</code> method is typically invoked as a result of the desugaring of a StringContext
-during parsing in Scalac. The method signature takes multiple <code>Embedded</code> parameters,
-which are designed to be created as the result of applying an implicit conversion, which
-will only succeed with appropriate <code>Embedding</code> implicits for embedding that type within
-the interpolated string.</p><p>The method is implemented with the main <code>contextual</code> macro.</p></div></div>
+      <p class="shortcomment cmt">The <a href="#apply(expressions:contextual.Interpolator.Embedded[Prefix.this.interpolator.Input,Prefix.this.interpolator.type]*):Any" class="extmbr" name="contextual.Prefix#apply">apply</a> method is typically invoked as a result of the desugaring of a
+<a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.StringContext" class="extype" target="_top">scala.StringContext</a> during parsing in Scalac.</p><div class="fullcomment"><div class="comment cmt"><p>The <a href="#apply(expressions:contextual.Interpolator.Embedded[Prefix.this.interpolator.Input,Prefix.this.interpolator.type]*):Any" class="extmbr" name="contextual.Prefix#apply">apply</a> method is typically invoked as a result of the desugaring of a
+<a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.StringContext" class="extype" target="_top">scala.StringContext</a> during parsing in Scalac. The method signature takes multiple
+<a href="Interpolator$$Embedded.html" class="extype" name="contextual.Interpolator.Embedded">Interpolator.Embedded</a> parameters, which are designed to be created as the result of
+applying an implicit conversion, which will only succeed with appropriate
+<a href="Interpolator$Embedding.html" class="extype" name="contextual.Interpolator.Embedding">Interpolator.Embedding</a> implicits for embedding that type within the interpolated
+string.</p><p>The method is implemented with the main <a href="index.html" class="extype" name="contextual">contextual</a> macro.
+</p></div><dl class="paramcmts block"><dt class="param">expressions</dt><dd class="cmt"><p>a sequence of expressions corresponding to each substitution</p></dd><dt>returns</dt><dd class="cmt"><p>the evaluated result of the <a href="index.html" class="extype" name="contextual">contextual</a> macro</p></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">

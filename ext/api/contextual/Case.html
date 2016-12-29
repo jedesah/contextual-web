@@ -90,7 +90,17 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li class="current-entities indented1">
-                        <a class="object" href="Context$.html" title=""></a>
+                        <a class="object" href="Case$.html" title="Factory object for creating Cases."></a>
+                        <a class="class" href="" title="A Case specifies for a particular Context how a value of type Value should
+be converted into the appropriate Input type to an Interpolator, and how the
+application of the value should change the Context in the interpolated string."></a>
+                        <a href="" title="A Case specifies for a particular Context how a value of type Value should
+be converted into the appropriate Input type to an Interpolator, and how the
+application of the value should change the Context in the interpolated string.">
+                          Case
+                        </a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="trait" href="Context.html" title="A Context describes the nature of the position in an interpolated string where a
 substitution is made, and determines how values of a particular type should be interpreted
 in the given position."></a>
@@ -100,25 +110,17 @@ in the given position.">
                           Context
                         </a>
                       </li><li class="current-entities indented1">
-                        <a class="object" href="Embedded$.html" title=""></a>
-                        <a class="class" href="Embedded.html" title=""></a>
-                        <a href="Embedded.html" title="">
-                          Embedded
+                        <span class="separator"></span>
+                        <a class="class" href="Embedder.html" title="An Embedder defines, for an Interpolator, InterpolatorType, a type Value should
+be converted to the common input type Input, when substituted into different context
+positions."></a>
+                        <a href="Embedder.html" title="An Embedder defines, for an Interpolator, InterpolatorType, a type Value should
+be converted to the common input type Input, when substituted into different context
+positions.">
+                          Embedder
                         </a>
                       </li><li class="current-entities indented1">
-                        <span class="separator"></span>
-                        <a class="class" href="" title=""></a>
-                        <a href="" title="">
-                          Handler
-                        </a>
-                      </li><li class="current-entities indented1">
-                        <span class="separator"></span>
-                        <a class="class" href="InterpolationError.html" title="Represents a compile-time failure in interpolation."></a>
-                        <a href="InterpolationError.html" title="Represents a compile-time failure in interpolation.">
-                          InterpolationError
-                        </a>
-                      </li><li class="current-entities indented1">
-                        <span class="separator"></span>
+                        <a class="object" href="Interpolator$.html" title="Companion object for the Interpolator, containing related definitions."></a>
                         <a class="trait" href="Interpolator.html" title="An Interpolator defines the compile-time and runtime behavior when interpreting an
 interpolated string."></a>
                         <a href="Interpolator.html" title="An Interpolator defines the compile-time and runtime behavior when interpreting an
@@ -127,27 +129,17 @@ interpolated string.">
                         </a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="object" href="Macros$.html" title="Object containing the main macro providing Contextual's functionality."></a>
-                        <a href="Macros$.html" title="Object containing the main macro providing Contextual's functionality.">
+                        <a class="class" href="Macros.html" title="Macro bundle class containing the main macro providing Contextual's functionality."></a>
+                        <a href="Macros.html" title="Macro bundle class containing the main macro providing Contextual's functionality.">
                           Macros
                         </a>
                       </li><li class="current-entities indented1">
-                        <a class="object" href="Prefix$.html" title=""></a>
-                        <a class="class" href="Prefix.html" title="A Prefix represents the attachment of an Interpolator to a StringContext, typically
-using an implicit class."></a>
-                        <a href="Prefix.html" title="A Prefix represents the attachment of an Interpolator to a StringContext, typically
-using an implicit class.">
+                        <a class="object" href="Prefix$.html" title="Companion and factory object for the Prefix class."></a>
+                        <a class="class" href="Prefix.html" title="A Prefix represents the attachment of an Interpolator to a scala.StringContext,
+typically using an implicit class."></a>
+                        <a href="Prefix.html" title="A Prefix represents the attachment of an Interpolator to a scala.StringContext,
+typically using an implicit class.">
                           Prefix
-                        </a>
-                      </li><li class="current-entities indented1">
-                        <a class="object" href="Transition$.html" title="Factory object for creating Transitions."></a>
-                        <a class="class" href="Transition.html" title="A Transition specifies for a particular Context how a value of type Value should be
-converted into the appropriate Input type to an Interpolator, and how the application of
-the value should change the Context in the interpolated string."></a>
-                        <a href="Transition.html" title="A Transition specifies for a particular Context how a value of type Value should be
-converted into the appropriate Input type to an Interpolator, and how the application of
-the value should change the Context in the interpolated string.">
-                          Transition
                         </a>
                       </li>
               </ul>
@@ -156,14 +148,16 @@ the value should change the Context in the interpolated string.">
           <div id="content">
             <body class="class type">
       <div id="definition">
-        <div class="big-circle class">c</div>
+        <a href="Case$.html" title="See companion object"><div class="big-circle class-companion-object">c</div></a>
         <p id="owner"><a href="index.html" class="extype" name="contextual">contextual</a></p>
-        <h1>Handler<span class="permalink">
-      <a href="../contextual/Handler.html" title="Permalink">
+        <h1><a href="Case$.html" title="See companion object">Case</a><span class="permalink">
+      <a href="../contextual/Case.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
-        <h3><span class="morelinks"></span></h3>
+        <h3><span class="morelinks"><div>
+            Companion <a href="Case$.html" title="See companion object">object Case</a>
+          </div></span></h3>
       </div>
 
       <h4 id="signature" class="signature">
@@ -172,16 +166,20 @@ the value should change the Context in the interpolated string.">
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">Handler</span><span class="tparams">[<span name="CC">CC &lt;: (<a href="Context.html" class="extype" name="contextual.Context">Context</a>, <a href="Context.html" class="extype" name="contextual.Context">Context</a>)</span>, <span name="V">V</span>, <span name="R">R</span>, <span name="I">I &lt;: <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+        <span class="name">Case</span><span class="tparams">[<span name="ContextPair">-ContextPair &lt;: (<a href="Context.html" class="extype" name="contextual.Context">Context</a>, <a href="Context.html" class="extype" name="contextual.Context">Context</a>)</span>, <span name="Value">-Value</span>, <span name="Input">+Input</span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A <a href="" class="extype" name="contextual.Case">Case</a> specifies for a particular <a href="Context.html" class="extype" name="contextual.Context">Context</a> how a value of type <code>Value</code> should
+be converted into the appropriate <code>Input</code> type to an <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a>, and how the
+application of the value should change the <a href="Context.html" class="extype" name="contextual.Context">Context</a> in the interpolated string.
+</p></div><dl class="paramcmts block"><dt class="tparam">ContextPair</dt><dd class="cmt"><p>the &quot;before&quot; and &quot;after&quot; contexts, represented as a pair</p></dd><dt class="tparam">Value</dt><dd class="cmt"><p>the type for which this <a href="" class="extype" name="contextual.Case">Case</a> handles conversion</p></dd><dt class="tparam">Input</dt><dd class="cmt"><p>the common input type to which all substitutions are converted for this
+<a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a>, often (but not always) <code>String</code></p></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
         
 
@@ -207,7 +205,7 @@ the value should change the Context in the interpolated string.">
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="contextual.Handler"><span>Handler</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="contextual.Case"><span>Case</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -225,26 +223,7 @@ the value should change the Context in the interpolated string.">
 
       <div id="template">
         <div id="allMembers">
-        <div id="constructors" class="members">
-              <h3>Instance Constructors</h3>
-              <ol><li name="contextual.Handler#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(cases:List[contextual.Transition[CC,V,R]]):contextual.Handler[CC,V,R,I]"></a><a id="&lt;init&gt;:Handler[CC,V,R,I]"></a>
-      <span class="permalink">
-      <a href="../contextual/Handler.html#&lt;init&gt;(cases:List[contextual.Transition[CC,V,R]]):contextual.Handler[CC,V,R,I]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">Handler</span><span class="params">(<span name="cases">cases: <span class="extype" name="scala.List">List</span>[<a href="Transition.html" class="extype" name="contextual.Transition">Transition</a>[<span class="extype" name="contextual.Handler.CC">CC</span>, <span class="extype" name="contextual.Handler.V">V</span>, <span class="extype" name="contextual.Handler.R">R</span>]]</span>)</span>
-      </span>
-      
-      
-    </li></ol>
-            </div>
+        
 
         
 
@@ -256,7 +235,7 @@ the value should change the Context in the interpolated string.">
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../contextual/Handler.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../contextual/Case.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -265,14 +244,14 @@ the value should change the Context in the interpolated string.">
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../contextual/Handler.html###():Int" title="Permalink">
+      <a href="../contextual/Case.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -281,14 +260,14 @@ the value should change the Context in the interpolated string.">
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../contextual/Handler.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../contextual/Case.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -297,30 +276,30 @@ the value should change the Context in the interpolated string.">
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="contextual.Handler#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply[C2](c:C2)(implicitev:&lt;:&lt;[CC,(C2,contextual.Context)]):V=&gt;R"></a><a id="apply[C2](C2)(&lt;:&lt;[CC,(C2,Context)]):(V)⇒R"></a>
+    </li><li name="contextual.Case#after" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="after:contextual.Context"></a><a id="after:Context"></a>
       <span class="permalink">
-      <a href="../contextual/Handler.html#apply[C2](c:C2)(implicitev:&lt;:&lt;[CC,(C2,contextual.Context)]):V=&gt;R" title="Permalink">
+      <a href="../contextual/Case.html#after:contextual.Context" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="C2">C2</span>]</span><span class="params">(<span name="c">c: <span class="extype" name="contextual.Handler.apply.C2">C2</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ev">ev: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="contextual.Handler.CC">CC</span>, (<span class="extype" name="contextual.Handler.apply.C2">C2</span>, <a href="Context.html" class="extype" name="contextual.Context">Context</a>)]</span>)</span><span class="result">: (<span class="extype" name="contextual.Handler.V">V</span>) ⇒ <span class="extype" name="contextual.Handler.R">R</span></span>
+        <span class="name">after</span><span class="result">: <a href="Context.html" class="extype" name="contextual.Context">Context</a></span>
       </span>
       
       
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../contextual/Handler.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../contextual/Case.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -333,26 +312,10 @@ the value should change the Context in the interpolated string.">
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="contextual.Handler#cases" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="cases:List[contextual.Transition[CC,V,R]]"></a><a id="cases:List[Transition[CC,V,R]]"></a>
-      <span class="permalink">
-      <a href="../contextual/Handler.html#cases:List[contextual.Transition[CC,V,R]]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">cases</span><span class="result">: <span class="extype" name="scala.List">List</span>[<a href="Transition.html" class="extype" name="contextual.Transition">Transition</a>[<span class="extype" name="contextual.Handler.CC">CC</span>, <span class="extype" name="contextual.Handler.V">V</span>, <span class="extype" name="contextual.Handler.R">R</span>]]</span>
-      </span>
-      
-      
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../contextual/Handler.html#clone():Object" title="Permalink">
+      <a href="../contextual/Case.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -361,7 +324,7 @@ the value should change the Context in the interpolated string.">
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -371,10 +334,42 @@ the value should change the Context in the interpolated string.">
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="contextual.Case#context" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="context:contextual.Context"></a><a id="context:Context"></a>
+      <span class="permalink">
+      <a href="../contextual/Case.html#context:contextual.Context" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">context</span><span class="result">: <a href="Context.html" class="extype" name="contextual.Context">Context</a></span>
+      </span>
+      
+      
+    </li><li name="contextual.Case#conversion" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="conversion:Value=&gt;Input"></a><a id="conversion:(Value)⇒Input"></a>
+      <span class="permalink">
+      <a href="../contextual/Case.html#conversion:Value=&gt;Input" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">conversion</span><span class="result">: (<span class="extype" name="contextual.Case.Value">Value</span>) ⇒ <span class="extype" name="contextual.Case.Input">Input</span></span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../contextual/Handler.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../contextual/Case.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -383,14 +378,14 @@ the value should change the Context in the interpolated string.">
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../contextual/Handler.html#equals(x$1:Any):Boolean" title="Permalink">
+      <a href="../contextual/Case.html#equals(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -399,14 +394,14 @@ the value should change the Context in the interpolated string.">
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../contextual/Handler.html#finalize():Unit" title="Permalink">
+      <a href="../contextual/Case.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -415,7 +410,7 @@ the value should change the Context in the interpolated string.">
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -428,7 +423,7 @@ the value should change the Context in the interpolated string.">
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../contextual/Handler.html#getClass():Class[_]" title="Permalink">
+      <a href="../contextual/Case.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -444,7 +439,7 @@ the value should change the Context in the interpolated string.">
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
-      <a href="../contextual/Handler.html#hashCode():Int" title="Permalink">
+      <a href="../contextual/Case.html#hashCode():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -453,14 +448,14 @@ the value should change the Context in the interpolated string.">
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../contextual/Handler.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../contextual/Case.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -469,14 +464,14 @@ the value should change the Context in the interpolated string.">
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../contextual/Handler.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../contextual/Case.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -485,14 +480,14 @@ the value should change the Context in the interpolated string.">
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../contextual/Handler.html#notify():Unit" title="Permalink">
+      <a href="../contextual/Case.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -501,14 +496,14 @@ the value should change the Context in the interpolated string.">
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../contextual/Handler.html#notifyAll():Unit" title="Permalink">
+      <a href="../contextual/Case.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -517,14 +512,14 @@ the value should change the Context in the interpolated string.">
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../contextual/Handler.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../contextual/Case.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -540,7 +535,7 @@ the value should change the Context in the interpolated string.">
     </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
-      <a href="../contextual/Handler.html#toString():String" title="Permalink">
+      <a href="../contextual/Case.html#toString():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -556,7 +551,7 @@ the value should change the Context in the interpolated string.">
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../contextual/Handler.html#wait():Unit" title="Permalink">
+      <a href="../contextual/Case.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -565,7 +560,7 @@ the value should change the Context in the interpolated string.">
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -578,7 +573,7 @@ the value should change the Context in the interpolated string.">
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../contextual/Handler.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../contextual/Case.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -587,7 +582,7 @@ the value should change the Context in the interpolated string.">
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -600,7 +595,7 @@ the value should change the Context in the interpolated string.">
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../contextual/Handler.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../contextual/Case.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -609,7 +604,7 @@ the value should change the Context in the interpolated string.">
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -630,9 +625,9 @@ the value should change the Context in the interpolated string.">
 
         <div id="inheritedMembers">
         <div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.0/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
             </div>
         
         </div>

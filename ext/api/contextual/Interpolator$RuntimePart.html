@@ -90,9 +90,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li name="contextual.Interpolator" visbl="pub" class="indented2 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="InterpolatorextendsInterpolator.Parts"></a><a id="Interpolator:Interpolator"></a>
+      <a id="InterpolatorextendsAnyRef"></a><a id="Interpolator:Interpolator"></a>
       <span class="permalink">
-      <a href="../contextual/index.html#InterpolatorextendsInterpolator.Parts" title="Permalink">
+      <a href="../contextual/index.html#InterpolatorextendsAnyRef" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,86 +104,132 @@
         <a title="An Interpolator defines the compile-time and runtime behavior when interpreting an
 interpolated string." href="Interpolator.html">
               <span class="name">Interpolator</span>
-            </a><span class="result"> extends <a href="Interpolator$$Parts.html" class="extype" name="contextual.Interpolator.Parts">Parts</a></span>
+            </a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
       </span>
       
-      <p class="shortcomment cmt">An <code>Interpolator</code> defines the compile-time and runtime behavior when interpreting an
-interpolated string.</p><div class="fullcomment"><div class="comment cmt"><p>An <code>Interpolator</code> defines the compile-time and runtime behavior when interpreting an
+      <p class="shortcomment cmt">An <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a> defines the compile-time and runtime behavior when interpreting an
+interpolated string.</p><div class="fullcomment"><div class="comment cmt"><p>An <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a> defines the compile-time and runtime behavior when interpreting an
 interpolated string.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="contextual">contextual</a></dd></dl></div>
-    </li><li name="contextual.Interpolator.Contextual" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Contextual[Parts&gt;:Interpolator.this.Literal&lt;:Interpolator.this.Part]extendsAnyRef"></a><a id="Contextual[Parts&lt;:Part&gt;:Literal]:Contextual[Parts]"></a>
-      <span class="permalink">
-      <a href="../contextual/Interpolator.html#Contextual[Parts&gt;:Interpolator.this.Literal&lt;:Interpolator.this.Part]extendsAnyRef" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a title="The Contextual type is a representation of the known compile-time information about an
-interpolated string." href="Interpolator$Contextual.html">
-              <span class="name">Contextual</span>
-            </a><span class="tparams">[<span name="Parts">Parts &gt;: <a href="Interpolator.html#LiteralextendsParts.this.StaticPartwithParts.this.RuntimePartwithProductwithSerializable" class="extmbr" name="contextual.Interpolator.Parts.Literal">Literal</a> &lt;: <a href="Interpolator.html#PartextendsProductwithSerializable" class="extmbr" name="contextual.Interpolator.Parts.Part">Part</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">The <code>Contextual</code> type is a representation of the known compile-time information about an
-interpolated string.</p><div class="fullcomment"><div class="comment cmt"><p>The <code>Contextual</code> type is a representation of the known compile-time information about an
-interpolated string. Most importantly, this includes the literal parts of the interpolated
-string; the constant parts which surround the variables parts that are substituted into
-it. The <code>Contextual</code> type also provides details about these holes, specifically the
-possible set of contexts in which the substituted value may be interpreted.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a></dd></dl></div>
-    </li><li class="current-entities indented3">
-                        <a class="object" href="Interpolator$Contextual$Implementation$.html" title=""></a>
-                        <a class="trait" href="Interpolator$Contextual$Implementation.html" title=""></a>
-                        <a href="Interpolator$Contextual$Implementation.html" title="">
-                          Implementation
+    </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Interpolator$ContextType.html" title="The type, which is typically sealed, of all Contexts which may exist for
+substitutions into this Interpolator."></a>
+                        <a href="Interpolator$ContextType.html" title="The type, which is typically sealed, of all Contexts which may exist for
+substitutions into this Interpolator.">
+                          ContextType
                         </a>
-                      </li><li class="current-entities indented3">
-                        <a class="object" href="" title=""></a>
-                        <a class="trait" href="Interpolator$Contextual$Implementer.html" title="An Implementer defines how a particular value should be converted into an AST tree
-for evaluation at runtime."></a>
-                        <a href="Interpolator$Contextual$Implementer.html" title="An Implementer defines how a particular value should be converted into an AST tree
-for evaluation at runtime.">
-                          Implementer
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="Interpolator$Embedding.html" title="Factory for creating Embedders."></a>
+                        <a href="Interpolator$Embedding.html" title="Factory for creating Embedders.">
+                          Embedding
+                        </a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="Interpolator$Hole.html" title="A Hole represents all that is known at compile-time about a substitution into an
+interpolated string."></a>
+                        <a href="Interpolator$Hole.html" title="A Hole represents all that is known at compile-time about a substitution into an
+interpolated string.">
+                          Hole
+                        </a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="abstract type" href="Interpolator$Input.html" title="The common type that substitutions of any supported type will be converted to for
+processing at runtime, in the evaluate method."></a>
+                        <a href="Interpolator$Input.html" title="The common type that substitutions of any supported type will be converted to for
+processing at runtime, in the evaluate method.">
+                          Input
+                        </a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="Interpolator$Literal.html" title="Represents a fixed, constant part of an interpolated string, known at compile-time."></a>
+                        <a href="Interpolator$Literal.html" title="Represents a fixed, constant part of an interpolated string, known at compile-time.">
+                          Literal
+                        </a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="Interpolator$Part.html" title="The common supertype of runtime and compile-time (static) parts of an interpolated
+string, namely Literals (common to both runtime and compile-time contexts),
+Holes (compile-time only) and Substitutions (runtime only)."></a>
+                        <a href="Interpolator$Part.html" title="The common supertype of runtime and compile-time (static) parts of an interpolated
+string, namely Literals (common to both runtime and compile-time contexts),
+Holes (compile-time only) and Substitutions (runtime only).">
+                          Part
+                        </a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="Interpolator$RuntimeInterpolation.html" title="The RuntimeInterpolation type is a representation of the known runtime information
+about an interpolated string."></a>
+                        <a href="Interpolator$RuntimeInterpolation.html" title="The RuntimeInterpolation type is a representation of the known runtime information
+about an interpolated string.">
+                          RuntimeInterpolation
+                        </a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="" title="Sealed trait of parts that are known at runtime."></a>
+                        <a href="" title="Sealed trait of parts that are known at runtime.">
+                          RuntimePart
+                        </a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="Interpolator$StaticInterpolation.html" title="The StaticInterpolation type is a representation of the known compile-time information
+about an interpolated string."></a>
+                        <a href="Interpolator$StaticInterpolation.html" title="The StaticInterpolation type is a representation of the known compile-time information
+about an interpolated string.">
+                          StaticInterpolation
+                        </a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="Interpolator$StaticPart.html" title="Sealed trait of parts that are known at compile-time."></a>
+                        <a href="Interpolator$StaticPart.html" title="Sealed trait of parts that are known at compile-time.">
+                          StaticPart
+                        </a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="Interpolator$Substitution.html" title="Represents a known value (at runtime) that is substituted into an interpolated string."></a>
+                        <a href="Interpolator$Substitution.html" title="Represents a known value (at runtime) that is substituted into an interpolated string.">
+                          Substitution
                         </a>
                       </li>
               </ul>
             </div>
           </div>
           <div id="content">
-            <body class="object value">
+            <body class="trait type">
       <div id="definition">
-        <a href="Interpolator$Contextual$Implementer.html" title="See companion trait"><div class="big-circle object-companion-trait">o</div></a>
-        <p id="owner"><a href="index.html" class="extype" name="contextual">contextual</a>.<a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a>.<a href="Interpolator$Contextual.html" class="extype" name="contextual.Interpolator.Contextual">Contextual</a></p>
-        <h1><a href="Interpolator$Contextual$Implementer.html" title="See companion trait">Implementer</a><span class="permalink">
-      <a href="../contextual/Interpolator$Contextual$Implementer$.html" title="Permalink">
+        <div class="big-circle trait">t</div>
+        <p id="owner"><a href="index.html" class="extype" name="contextual">contextual</a>.<a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a></p>
+        <h1>RuntimePart<span class="permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
-        <h3><span class="morelinks"><div>
-            Companion <a href="Interpolator$Contextual$Implementer.html" title="See companion trait">trait Implementer</a>
-          </div></span></h3>
+        <h3><span class="morelinks"></span></h3>
       </div>
 
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">Implementer</span>
+        <span class="name">RuntimePart</span><span class="result"> extends <a href="Interpolator$Part.html" class="extype" name="contextual.Interpolator.Part">Part</a> with <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Sealed trait of parts that are known at runtime. This is only <a href="Interpolator$Literal.html" class="extype" name="contextual.Interpolator.Literal">Literal</a> and
+<a href="Interpolator$Substitution.html" class="extype" name="contextual.Interpolator.Substitution">Substitution</a> values. Note that <a href="Interpolator$Literal.html" class="extype" name="contextual.Interpolator.Literal">Literal</a>s are also available at compile-time.</p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Any" class="extype" target="_top">Any</a></div>
-        </div></div>
+          <div class="superTypes hiddenContent"><a href="Interpolator$Part.html" class="extype" name="contextual.Interpolator.Part">Part</a>, <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Product" class="extype" target="_top">Product</a>, <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Equals" class="extype" target="_top">Equals</a>, <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+        </div><div class="toggleContainer block">
+            <span class="toggle">
+              Known Subclasses
+            </span>
+            <div class="subClasses hiddenContent"><a href="Interpolator$Literal.html" class="extype" name="contextual.Interpolator.Literal">Literal</a>, <a href="Interpolator$Substitution.html" class="extype" name="contextual.Interpolator.Substitution">Substitution</a></div>
+          </div></div>
         
 
       <div id="mbrsel">
@@ -208,7 +254,7 @@ for evaluation at runtime.">
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="contextual.Interpolator.Contextual.Implementer"><span>Implementer</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="contextual.Interpolator.RuntimePart"><span>RuntimePart</span></li><li class="in" name="contextual.Interpolator.Part"><span>Part</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -230,15 +276,82 @@ for evaluation at runtime.">
 
         
 
-        
+        <div class="values members">
+              <h3>Abstract Value Members</h3>
+              <ol><li name="scala.Equals#canEqual" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="canEqual(that:Any):Boolean"></a><a id="canEqual(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#canEqual(that:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">canEqual</span><span class="params">(<span name="that">that: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Equals</dd></dl></div>
+    </li><li name="contextual.Interpolator.RuntimePart#index" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="index:Int"></a>
+      <span class="permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#index:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">index</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+      </span>
+      
+      
+    </li><li name="scala.Product#productArity" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="productArity:Int"></a>
+      <span class="permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#productArity:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">productArity</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Product</dd></dl></div>
+    </li><li name="scala.Product#productElement" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="productElement(n:Int):Any"></a><a id="productElement(Int):Any"></a>
+      <span class="permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#productElement(n:Int):Any" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">productElement</span><span class="params">(<span name="n">n: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Any" class="extype" target="_top">Any</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Product</dd></dl></div>
+    </li></ol>
+            </div>
 
         <div class="values members">
-              <h3>Value Members</h3>
+              <h3>Concrete Value Members</h3>
               <ol>
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Contextual$Implementer$.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -254,7 +367,7 @@ for evaluation at runtime.">
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Contextual$Implementer$.html###():Int" title="Permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -270,7 +383,7 @@ for evaluation at runtime.">
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Contextual$Implementer$.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -286,7 +399,7 @@ for evaluation at runtime.">
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Contextual$Implementer$.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -302,7 +415,7 @@ for evaluation at runtime.">
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Contextual$Implementer$.html#clone():Object" title="Permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -324,7 +437,7 @@ for evaluation at runtime.">
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Contextual$Implementer$.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -340,7 +453,7 @@ for evaluation at runtime.">
     </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Contextual$Implementer$.html#equals(x$1:Any):Boolean" title="Permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#equals(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -356,7 +469,7 @@ for evaluation at runtime.">
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Contextual$Implementer$.html#finalize():Unit" title="Permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -378,7 +491,7 @@ for evaluation at runtime.">
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Contextual$Implementer$.html#getClass():Class[_]" title="Permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -394,7 +507,7 @@ for evaluation at runtime.">
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Contextual$Implementer$.html#hashCode():Int" title="Permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#hashCode():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -410,7 +523,7 @@ for evaluation at runtime.">
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Contextual$Implementer$.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -426,7 +539,7 @@ for evaluation at runtime.">
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Contextual$Implementer$.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -442,7 +555,7 @@ for evaluation at runtime.">
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Contextual$Implementer$.html#notify():Unit" title="Permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -458,7 +571,7 @@ for evaluation at runtime.">
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Contextual$Implementer$.html#notifyAll():Unit" title="Permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -471,42 +584,42 @@ for evaluation at runtime.">
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="contextual.Interpolator.Contextual.Implementer#quasiquotes" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="quasiquotes:Contextual.this.Implementer[Contextual.this.context.Tree]"></a><a id="quasiquotes:Implementer[scala.reflect.macros.whitebox.Context.Tree]"></a>
+    </li><li name="scala.Product#productIterator" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="productIterator:Iterator[Any]"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Contextual$Implementer$.html#quasiquotes:Contextual.this.Implementer[Contextual.this.context.Tree]" title="Permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#productIterator:Iterator[Any]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">val</span>
+        <span class="modifier"></span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">quasiquotes</span><span class="result">: <a href="Interpolator$Contextual$Implementer.html" class="extype" name="contextual.Interpolator.Contextual.Implementer">Implementer</a>[<span class="extype" name="scala.reflect.macros.Aliases.Tree">scala.reflect.macros.whitebox.Context.Tree</span>]</span>
+        <span class="name">productIterator</span><span class="result">: <span class="extype" name="scala.Iterator">Iterator</span>[<a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Any" class="extype" target="_top">Any</a>]</span>
       </span>
       
-      
-    </li><li name="contextual.Interpolator.Contextual.Implementer#string" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="string:Contextual.this.Implementer[String]"></a><a id="string:Implementer[String]"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Product</dd></dl></div>
+    </li><li name="scala.Product#productPrefix" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="productPrefix:String"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Contextual$Implementer$.html#string:Contextual.this.Implementer[String]" title="Permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#productPrefix:String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">val</span>
+        <span class="modifier"></span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">string</span><span class="result">: <a href="Interpolator$Contextual$Implementer.html" class="extype" name="contextual.Interpolator.Contextual.Implementer">Implementer</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">productPrefix</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
       
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Product</dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Contextual$Implementer$.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -522,7 +635,7 @@ for evaluation at runtime.">
     </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Contextual$Implementer$.html#toString():String" title="Permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#toString():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -538,7 +651,7 @@ for evaluation at runtime.">
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Contextual$Implementer$.html#wait():Unit" title="Permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -560,7 +673,7 @@ for evaluation at runtime.">
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Contextual$Implementer$.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -582,7 +695,7 @@ for evaluation at runtime.">
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Contextual$Implementer$.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../contextual/Interpolator$RuntimePart.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -611,7 +724,17 @@ for evaluation at runtime.">
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="contextual.Interpolator.Part">
+              <h3>Inherited from <a href="Interpolator$Part.html" class="extype" name="contextual.Interpolator.Part">Part</a></h3>
+            </div><div class="parent" name="scala.Serializable">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></h3>
+            </div><div class="parent" name="java.io.Serializable">
+              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
+            </div><div class="parent" name="scala.Product">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Product" class="extype" target="_top">Product</a></h3>
+            </div><div class="parent" name="scala.Equals">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Equals" class="extype" target="_top">Equals</a></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Any" class="extype" target="_top">Any</a></h3>

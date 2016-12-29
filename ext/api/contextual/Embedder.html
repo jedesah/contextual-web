@@ -90,6 +90,16 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li class="current-entities indented1">
+                        <a class="object" href="Case$.html" title="Factory object for creating Cases."></a>
+                        <a class="class" href="Case.html" title="A Case specifies for a particular Context how a value of type Value should
+be converted into the appropriate Input type to an Interpolator, and how the
+application of the value should change the Context in the interpolated string."></a>
+                        <a href="Case.html" title="A Case specifies for a particular Context how a value of type Value should
+be converted into the appropriate Input type to an Interpolator, and how the
+application of the value should change the Context in the interpolated string.">
+                          Case
+                        </a>
+                      </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="trait" href="Context.html" title="A Context describes the nature of the position in an interpolated string where a
 substitution is made, and determines how values of a particular type should be interpreted
@@ -101,20 +111,16 @@ in the given position.">
                         </a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="class" href="" title="An Embedder defines, for an Interpolator, I, a type V should be converted to the
-common input type 'R', when substituted into different context positions."></a>
-                        <a href="" title="An Embedder defines, for an Interpolator, I, a type V should be converted to the
-common input type 'R', when substituted into different context positions.">
+                        <a class="class" href="" title="An Embedder defines, for an Interpolator, InterpolatorType, a type Value should
+be converted to the common input type Input, when substituted into different context
+positions."></a>
+                        <a href="" title="An Embedder defines, for an Interpolator, InterpolatorType, a type Value should
+be converted to the common input type Input, when substituted into different context
+positions.">
                           Embedder
                         </a>
                       </li><li class="current-entities indented1">
-                        <span class="separator"></span>
-                        <a class="class" href="InterpolationError.html" title="Represents a compile-time failure in interpolation."></a>
-                        <a href="InterpolationError.html" title="Represents a compile-time failure in interpolation.">
-                          InterpolationError
-                        </a>
-                      </li><li class="current-entities indented1">
-                        <a class="object" href="Interpolator$.html" title=""></a>
+                        <a class="object" href="Interpolator$.html" title="Companion object for the Interpolator, containing related definitions."></a>
                         <a class="trait" href="Interpolator.html" title="An Interpolator defines the compile-time and runtime behavior when interpreting an
 interpolated string."></a>
                         <a href="Interpolator.html" title="An Interpolator defines the compile-time and runtime behavior when interpreting an
@@ -123,27 +129,17 @@ interpolated string.">
                         </a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="object" href="Macros$.html" title="Object containing the main macro providing Contextual's functionality."></a>
-                        <a href="Macros$.html" title="Object containing the main macro providing Contextual's functionality.">
+                        <a class="class" href="Macros.html" title="Macro bundle class containing the main macro providing Contextual's functionality."></a>
+                        <a href="Macros.html" title="Macro bundle class containing the main macro providing Contextual's functionality.">
                           Macros
                         </a>
                       </li><li class="current-entities indented1">
-                        <a class="object" href="Prefix$.html" title=""></a>
-                        <a class="class" href="Prefix.html" title="A Prefix represents the attachment of an Interpolator to a StringContext, typically
-using an implicit class."></a>
-                        <a href="Prefix.html" title="A Prefix represents the attachment of an Interpolator to a StringContext, typically
-using an implicit class.">
+                        <a class="object" href="Prefix$.html" title="Companion and factory object for the Prefix class."></a>
+                        <a class="class" href="Prefix.html" title="A Prefix represents the attachment of an Interpolator to a scala.StringContext,
+typically using an implicit class."></a>
+                        <a href="Prefix.html" title="A Prefix represents the attachment of an Interpolator to a scala.StringContext,
+typically using an implicit class.">
                           Prefix
-                        </a>
-                      </li><li class="current-entities indented1">
-                        <a class="object" href="Transition$.html" title="Factory object for creating Transitions."></a>
-                        <a class="class" href="Transition.html" title="A Transition specifies for a particular Context how a value of type Value should be
-converted into the appropriate Input type to an Interpolator, and how the application of
-the value should change the Context in the interpolated string."></a>
-                        <a href="Transition.html" title="A Transition specifies for a particular Context how a value of type Value should be
-converted into the appropriate Input type to an Interpolator, and how the application of
-the value should change the Context in the interpolated string.">
-                          Transition
                         </a>
                       </li>
               </ul>
@@ -168,13 +164,18 @@ the value should change the Context in the interpolated string.">
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">Embedder</span><span class="tparams">[<span name="CC">CC &lt;: (<a href="Context.html" class="extype" name="contextual.Context">Context</a>, <a href="Context.html" class="extype" name="contextual.Context">Context</a>)</span>, <span name="V">V</span>, <span name="R">R</span>, <span name="I">I &lt;: <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+        <span class="name">Embedder</span><span class="tparams">[<span name="ContextPair">ContextPair &lt;: (<a href="Context.html" class="extype" name="contextual.Context">Context</a>, <a href="Context.html" class="extype" name="contextual.Context">Context</a>)</span>, <span name="Value">Value</span>, <span name="Input">Input</span>, <span name="InterpolatorType">InterpolatorType &lt;: <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>An <code>Embedder</code> defines, for an <code>Interpolator</code>, <code>I</code>, a type <code>V</code> should be converted to the
-common input type 'R', when substituted into different context positions.</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>An <a href="" class="extype" name="contextual.Embedder">Embedder</a> defines, for an <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a>, <code>InterpolatorType</code>, a type <code>Value</code> should
+be converted to the common input type <code>Input</code>, when substituted into different context
+positions. These should be created using the <a href="Interpolator$.html#embed[ContextPair&lt;:(contextual.Context,contextual.Context),Value,Input,InterpolatorType&lt;:contextual.Interpolator](value:Value)(implicitembedder:contextual.Embedder[ContextPair,Value,Input,InterpolatorType]):contextual.Interpolator.Embedded[Input,InterpolatorType]" class="extmbr" name="contextual.Interpolator#embed">Interpolator#embed</a> method.
+</p></div><dl class="paramcmts block"><dt class="tparam">ContextPair</dt><dd class="cmt"><p>the intersection of &quot;before&quot; and &quot;after&quot; contexts, inferred from the
+least upper-bound of the <a href="Case.html" class="extype" name="contextual.Case">Case</a>s</p></dd><dt class="tparam">Value</dt><dd class="cmt"><p>the type this <a href="" class="extype" name="contextual.Embedder">Embedder</a> is defining substitution functions for</p></dd><dt class="tparam">Input</dt><dd class="cmt"><p>the common input type to which all substitutions are converted for this
+<a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a></p></dd><dt class="tparam">InterpolatorType</dt><dd class="cmt"><p>the <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a> singleton type for which this <a href="" class="extype" name="contextual.Embedder">Embedder</a> is
+defining substitution functions</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -224,10 +225,10 @@ common input type 'R', when substituted into different context positions.</p></d
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="contextual.Embedder#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(cases:Seq[contextual.Transition[CC,V,R]]):contextual.Embedder[CC,V,R,I]"></a><a id="&lt;init&gt;:Embedder[CC,V,R,I]"></a>
+              <ol><li name="contextual.Embedder#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;init&gt;(cases:Seq[contextual.Case[ContextPair,Value,Input]]):contextual.Embedder[ContextPair,Value,Input,InterpolatorType]"></a><a id="&lt;init&gt;:Embedder[ContextPair,Value,Input,InterpolatorType]"></a>
       <span class="permalink">
-      <a href="../contextual/Embedder.html#&lt;init&gt;(cases:Seq[contextual.Transition[CC,V,R]]):contextual.Embedder[CC,V,R,I]" title="Permalink">
+      <a href="../contextual/Embedder.html#&lt;init&gt;(cases:Seq[contextual.Case[ContextPair,Value,Input]]):contextual.Embedder[ContextPair,Value,Input,InterpolatorType]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -236,10 +237,11 @@ common input type 'R', when substituted into different context positions.</p></d
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Embedder</span><span class="params">(<span name="cases">cases: <span class="extype" name="scala.Seq">Seq</span>[<a href="Transition.html" class="extype" name="contextual.Transition">Transition</a>[<span class="extype" name="contextual.Embedder.CC">CC</span>, <span class="extype" name="contextual.Embedder.V">V</span>, <span class="extype" name="contextual.Embedder.R">R</span>]]</span>)</span>
+        <span class="name">Embedder</span><span class="params">(<span name="cases">cases: <span class="extype" name="scala.Seq">Seq</span>[<a href="Case.html" class="extype" name="contextual.Case">Case</a>[<span class="extype" name="contextual.Embedder.ContextPair">ContextPair</span>, <span class="extype" name="contextual.Embedder.Value">Value</span>, <span class="extype" name="contextual.Embedder.Input">Input</span>]]</span>)</span>
       </span>
       
-      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">cases</dt><dd class="cmt"><p>the functions for converting the <code>Value</code> type to <code>Input</code> for each supported
+<a href="Context.html" class="extype" name="contextual.Context">Context</a></p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -298,10 +300,10 @@ common input type 'R', when substituted into different context positions.</p></d
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="contextual.Embedder#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="apply[C2](c:C2)(implicitev:&lt;:&lt;[CC,(C2,contextual.Context)]):V=&gt;R"></a><a id="apply[C2](C2)(&lt;:&lt;[CC,(C2,Context)]):(V)⇒R"></a>
+    </li><li name="contextual.Embedder#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply[HoleContext](holeContext:HoleContext)(implicitevidence:&lt;:&lt;[ContextPair,(HoleContext,contextual.Context)]):Value=&gt;Input"></a><a id="apply[HoleContext](HoleContext)(&lt;:&lt;[ContextPair,(HoleContext,Context)]):(Value)⇒Input"></a>
       <span class="permalink">
-      <a href="../contextual/Embedder.html#apply[C2](c:C2)(implicitev:&lt;:&lt;[CC,(C2,contextual.Context)]):V=&gt;R" title="Permalink">
+      <a href="../contextual/Embedder.html#apply[HoleContext](holeContext:HoleContext)(implicitevidence:&lt;:&lt;[ContextPair,(HoleContext,contextual.Context)]):Value=&gt;Input" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -310,10 +312,14 @@ common input type 'R', when substituted into different context positions.</p></d
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="C2">C2</span>]</span><span class="params">(<span name="c">c: <span class="extype" name="contextual.Embedder.apply.C2">C2</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="ev">ev: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="contextual.Embedder.CC">CC</span>, (<span class="extype" name="contextual.Embedder.apply.C2">C2</span>, <a href="Context.html" class="extype" name="contextual.Context">Context</a>)]</span>)</span><span class="result">: (<span class="extype" name="contextual.Embedder.V">V</span>) ⇒ <span class="extype" name="contextual.Embedder.R">R</span></span>
+        <span class="name">apply</span><span class="tparams">[<span name="HoleContext">HoleContext</span>]</span><span class="params">(<span name="holeContext">holeContext: <span class="extype" name="contextual.Embedder.apply.HoleContext">HoleContext</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="evidence">evidence: <span class="extype" name="scala.Predef.&lt;:&lt;">&lt;:&lt;</span>[<span class="extype" name="contextual.Embedder.ContextPair">ContextPair</span>, (<span class="extype" name="contextual.Embedder.apply.HoleContext">HoleContext</span>, <a href="Context.html" class="extype" name="contextual.Context">Context</a>)]</span>)</span><span class="result">: (<span class="extype" name="contextual.Embedder.Value">Value</span>) ⇒ <span class="extype" name="contextual.Embedder.Input">Input</span></span>
       </span>
       
-      
+      <p class="shortcomment cmt">Retrieve the conversion function from the <code>Value</code> type to the <code>Input</code> type for the
+specified <a href="Context.html" class="extype" name="contextual.Context">Context</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Retrieve the conversion function from the <code>Value</code> type to the <code>Input</code> type for the
+specified <a href="Context.html" class="extype" name="contextual.Context">Context</a>.
+</p></div><dl class="paramcmts block"><dt class="tparam">HoleContext</dt><dd class="cmt"><p>the singleton type corresponding to the context of the hole</p></dd><dt class="param">holeContext</dt><dd class="cmt"><p>the context of the hole for which to retrieve the conversion function</p></dd><dt>returns</dt><dd class="cmt"><p>the function for converting the <code>Value</code> type to an <code>Input</code> for the specified
+Context</p></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
@@ -331,9 +337,9 @@ common input type 'R', when substituted into different context positions.</p></d
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="contextual.Embedder#cases" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="cases:Seq[contextual.Transition[CC,V,R]]"></a><a id="cases:Seq[Transition[CC,V,R]]"></a>
+      <a id="cases:Seq[contextual.Case[ContextPair,Value,Input]]"></a><a id="cases:Seq[Case[ContextPair,Value,Input]]"></a>
       <span class="permalink">
-      <a href="../contextual/Embedder.html#cases:Seq[contextual.Transition[CC,V,R]]" title="Permalink">
+      <a href="../contextual/Embedder.html#cases:Seq[contextual.Case[ContextPair,Value,Input]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -342,7 +348,7 @@ common input type 'R', when substituted into different context positions.</p></d
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">cases</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="Transition.html" class="extype" name="contextual.Transition">Transition</a>[<span class="extype" name="contextual.Embedder.CC">CC</span>, <span class="extype" name="contextual.Embedder.V">V</span>, <span class="extype" name="contextual.Embedder.R">R</span>]]</span>
+        <span class="name">cases</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="Case.html" class="extype" name="contextual.Case">Case</a>[<span class="extype" name="contextual.Embedder.ContextPair">ContextPair</span>, <span class="extype" name="contextual.Embedder.Value">Value</span>, <span class="extype" name="contextual.Embedder.Input">Input</span>]]</span>
       </span>
       
       

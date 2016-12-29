@@ -142,8 +142,8 @@ processing at runtime, in the evaluate method.">
                         </a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="class" href="" title="Represents a fixed, constant part of an interpolated string, known at compile-time."></a>
-                        <a href="" title="Represents a fixed, constant part of an interpolated string, known at compile-time.">
+                        <a class="class" href="Interpolator$Literal.html" title="Represents a fixed, constant part of an interpolated string, known at compile-time."></a>
+                        <a href="Interpolator$Literal.html" title="Represents a fixed, constant part of an interpolated string, known at compile-time.">
                           Literal
                         </a>
                       </li><li class="current-entities indented2">
@@ -172,9 +172,9 @@ about an interpolated string.">
                         </a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="trait" href="Interpolator$StaticInterpolation.html" title="The StaticInterpolation type is a representation of the known compile-time information
+                        <a class="trait" href="" title="The StaticInterpolation type is a representation of the known compile-time information
 about an interpolated string."></a>
-                        <a href="Interpolator$StaticInterpolation.html" title="The StaticInterpolation type is a representation of the known compile-time information
+                        <a href="" title="The StaticInterpolation type is a representation of the known compile-time information
 about an interpolated string.">
                           StaticInterpolation
                         </a>
@@ -195,12 +195,12 @@ about an interpolated string.">
             </div>
           </div>
           <div id="content">
-            <body class="class type">
+            <body class="trait type">
       <div id="definition">
-        <div class="big-circle class">c</div>
+        <div class="big-circle trait">t</div>
         <p id="owner"><a href="index.html" class="extype" name="contextual">contextual</a>.<a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a></p>
-        <h1>Literal<span class="permalink">
-      <a href="../contextual/Interpolator$Literal.html" title="Permalink">
+        <h1>StaticInterpolation<span class="permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
@@ -210,20 +210,24 @@ about an interpolated string.">
       <h4 id="signature" class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">case class</span>
+        <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">Literal</span><span class="params">(<span name="index">index: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="string">string: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Interpolator$StaticPart.html" class="extype" name="contextual.Interpolator.StaticPart">StaticPart</a> with <a href="Interpolator$RuntimePart.html" class="extype" name="contextual.Interpolator.RuntimePart">RuntimePart</a> with <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+        <span class="name">StaticInterpolation</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Represents a fixed, constant part of an interpolated string, known at compile-time.
-</p></div><dl class="paramcmts block"><dt class="param">index</dt><dd class="cmt"><p>the integer index of this literal within the interpolated string</p></dd><dt class="param">string</dt><dd class="cmt"><p>the actual string literal</p></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The <a href="" class="extype" name="contextual.Interpolator.StaticInterpolation">StaticInterpolation</a> type is a representation of the known compile-time information
+about an interpolated string. Most importantly, this includes the literal parts of the
+interpolated string; the constant parts which surround the variables parts that are
+substituted into it. The <a href="" class="extype" name="contextual.Interpolator.StaticInterpolation">StaticInterpolation</a> type also provides details about these
+holes, specifically the possible set of contexts in which the substituted value may be
+interpreted.</p></div><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="Interpolator$RuntimePart.html" class="extype" name="contextual.Interpolator.RuntimePart">RuntimePart</a>, <a href="Interpolator$StaticPart.html" class="extype" name="contextual.Interpolator.StaticPart">StaticPart</a>, <a href="Interpolator$Part.html" class="extype" name="contextual.Interpolator.Part">Part</a>, <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Serializable" class="extype" target="_top">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Product" class="extype" target="_top">Product</a>, <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Equals" class="extype" target="_top">Equals</a>, <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div></div>
         
 
@@ -249,7 +253,7 @@ about an interpolated string.">
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="contextual.Interpolator.Literal"><span>Literal</span></li><li class="in" name="contextual.Interpolator.RuntimePart"><span>RuntimePart</span></li><li class="in" name="contextual.Interpolator.StaticPart"><span>StaticPart</span></li><li class="in" name="contextual.Interpolator.Part"><span>Part</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="contextual.Interpolator.StaticInterpolation"><span>StaticInterpolation</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -267,38 +271,118 @@ about an interpolated string.">
 
       <div id="template">
         <div id="allMembers">
-        <div id="constructors" class="members">
-              <h3>Instance Constructors</h3>
-              <ol><li name="contextual.Interpolator.Literal#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="&lt;init&gt;(index:Int,string:String):Interpolator.this.Literal"></a><a id="&lt;init&gt;:Literal"></a>
-      <span class="permalink">
-      <a href="../contextual/Interpolator$Literal.html#&lt;init&gt;(index:Int,string:String):Interpolator.this.Literal" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">new</span>
-      </span>
-      <span class="symbol">
-        <span class="name">Literal</span><span class="params">(<span name="index">index: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="string">string: <span class="extype" name="scala.Predef.String">String</span></span>)</span>
-      </span>
-      
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">index</dt><dd class="cmt"><p>the integer index of this literal within the interpolated string</p></dd><dt class="param">string</dt><dd class="cmt"><p>the actual string literal</p></dd></dl></div>
-    </li></ol>
-            </div>
-
         
 
         
 
         <div class="values members">
-              <h3>Value Members</h3>
+              <h3>Abstract Value Members</h3>
+              <ol><li name="contextual.Interpolator.StaticInterpolation#holeTrees" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="holeTrees:Seq[StaticInterpolation.this.macroContext.Tree]"></a><a id="holeTrees:Seq[scala.reflect.macros.whitebox.Context.Tree]"></a>
+      <span class="permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#holeTrees:Seq[StaticInterpolation.this.macroContext.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">holeTrees</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.reflect.macros.Aliases.Tree">scala.reflect.macros.whitebox.Context.Tree</span>]</span>
+      </span>
+      
+      
+    </li><li name="contextual.Interpolator.StaticInterpolation#holes" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="holes:Seq[Interpolator.this.Hole]"></a><a id="holes:Seq[Hole]"></a>
+      <span class="permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#holes:Seq[Interpolator.this.Hole]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">holes</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="Interpolator$Hole.html" class="extype" name="contextual.Interpolator.Hole">Hole</a>]</span>
+      </span>
+      
+      
+    </li><li name="contextual.Interpolator.StaticInterpolation#interpolatorTerm" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="interpolatorTerm:StaticInterpolation.this.macroContext.Symbol"></a><a id="interpolatorTerm:scala.reflect.macros.whitebox.Context.Symbol"></a>
+      <span class="permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#interpolatorTerm:StaticInterpolation.this.macroContext.Symbol" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">interpolatorTerm</span><span class="result">: <span class="extype" name="scala.reflect.macros.Aliases.Symbol">scala.reflect.macros.whitebox.Context.Symbol</span></span>
+      </span>
+      
+      
+    </li><li name="contextual.Interpolator.StaticInterpolation#literalTrees" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="literalTrees:Seq[StaticInterpolation.this.macroContext.Tree]"></a><a id="literalTrees:Seq[scala.reflect.macros.whitebox.Context.Tree]"></a>
+      <span class="permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#literalTrees:Seq[StaticInterpolation.this.macroContext.Tree]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">literalTrees</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.reflect.macros.Aliases.Tree">scala.reflect.macros.whitebox.Context.Tree</span>]</span>
+      </span>
+      
+      
+    </li><li name="contextual.Interpolator.StaticInterpolation#literals" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="literals:Seq[String]"></a>
+      <span class="permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#literals:Seq[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">literals</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      
+    </li><li name="contextual.Interpolator.StaticInterpolation#macroContext" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="macroContext:scala.reflect.macros.whitebox.Context"></a>
+      <span class="permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#macroContext:scala.reflect.macros.whitebox.Context" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">abstract </span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">macroContext</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.reflect.macros.whitebox.Context" class="extype" target="_top">scala.reflect.macros.whitebox.Context</a></span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        <div class="values members">
+              <h3>Concrete Value Members</h3>
               <ol>
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Literal.html#!=(x$1:Any):Boolean" title="Permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#!=(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -314,7 +398,7 @@ about an interpolated string.">
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Literal.html###():Int" title="Permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html###():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -330,7 +414,7 @@ about an interpolated string.">
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Literal.html#==(x$1:Any):Boolean" title="Permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#==(x$1:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -343,10 +427,46 @@ about an interpolated string.">
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="contextual.Interpolator.StaticInterpolation#abort" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="abort(part:Interpolator.this.Hole,message:String):Nothing"></a><a id="abort(Hole,String):Nothing"></a>
+      <span class="permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#abort(part:Interpolator.this.Hole,message:String):Nothing" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">abort</span><span class="params">(<span name="part">part: <a href="Interpolator$Hole.html" class="extype" name="contextual.Interpolator.Hole">Hole</a></span>, <span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Nothing" class="extype" target="_top">Nothing</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Report a compile error <code>message</code>, at the <a href="Interpolator$Hole.html" class="extype" name="contextual.Interpolator.Hole">Hole</a> <code>part</code>, and stop evaluating the macro.</p><div class="fullcomment"><div class="comment cmt"><p>Report a compile error <code>message</code>, at the <a href="Interpolator$Hole.html" class="extype" name="contextual.Interpolator.Hole">Hole</a> <code>part</code>, and stop evaluating the macro.
+</p></div><dl class="paramcmts block"><dt class="param">part</dt><dd class="cmt"><p>the <a href="Interpolator$Hole.html" class="extype" name="contextual.Interpolator.Hole">Hole</a> part containing the error</p></dd><dt class="param">message</dt><dd class="cmt"><p>the error message to report</p></dd></dl></div>
+    </li><li name="contextual.Interpolator.StaticInterpolation#abort" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="abort(part:Interpolator.this.Literal,offset:Int,message:String):Nothing"></a><a id="abort(Literal,Int,String):Nothing"></a>
+      <span class="permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#abort(part:Interpolator.this.Literal,offset:Int,message:String):Nothing" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">abort</span><span class="params">(<span name="part">part: <a href="Interpolator$Literal.html" class="extype" name="contextual.Interpolator.Literal">Literal</a></span>, <span name="offset">offset: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Nothing" class="extype" target="_top">Nothing</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Report a compile error <code>message</code>, at the index <code>offset</code> within the <a href="Interpolator$Literal.html" class="extype" name="contextual.Interpolator.Literal">Literal</a> <code>part</code>,
+and stop further evaluation of the macro.</p><div class="fullcomment"><div class="comment cmt"><p>Report a compile error <code>message</code>, at the index <code>offset</code> within the <a href="Interpolator$Literal.html" class="extype" name="contextual.Interpolator.Literal">Literal</a> <code>part</code>,
+and stop further evaluation of the macro.
+</p></div><dl class="paramcmts block"><dt class="param">part</dt><dd class="cmt"><p>the <a href="Interpolator$Literal.html" class="extype" name="contextual.Interpolator.Literal">Literal</a> part containing the error</p></dd><dt class="param">offset</dt><dd class="cmt"><p>the index of the error within the <a href="Interpolator$Literal.html" class="extype" name="contextual.Interpolator.Literal">Literal</a> part</p></dd><dt class="param">message</dt><dd class="cmt"><p>the error message to report</p></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Literal.html#asInstanceOf[T0]:T0" title="Permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#asInstanceOf[T0]:T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -362,7 +482,7 @@ about an interpolated string.">
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Literal.html#clone():Object" title="Permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#clone():Object" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -384,7 +504,7 @@ about an interpolated string.">
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Literal.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#eq(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -397,10 +517,64 @@ about an interpolated string.">
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="contextual.Interpolator.StaticInterpolation#error" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="error(part:Interpolator.this.Hole,message:String):Unit"></a><a id="error(Hole,String):Unit"></a>
+      <span class="permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#error(part:Interpolator.this.Hole,message:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">error</span><span class="params">(<span name="part">part: <a href="Interpolator$Hole.html" class="extype" name="contextual.Interpolator.Hole">Hole</a></span>, <span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Report a compile error <code>message</code>, at the <a href="Interpolator$Hole.html" class="extype" name="contextual.Interpolator.Hole">Hole</a> <code>part</code>, and continue evaluating the
+macro, whilst compilation will ultimately fail.</p><div class="fullcomment"><div class="comment cmt"><p>Report a compile error <code>message</code>, at the <a href="Interpolator$Hole.html" class="extype" name="contextual.Interpolator.Hole">Hole</a> <code>part</code>, and continue evaluating the
+macro, whilst compilation will ultimately fail.
+</p></div><dl class="paramcmts block"><dt class="param">part</dt><dd class="cmt"><p>the <a href="Interpolator$Hole.html" class="extype" name="contextual.Interpolator.Hole">Hole</a> part containing the error</p></dd><dt class="param">message</dt><dd class="cmt"><p>the error message to report</p></dd></dl></div>
+    </li><li name="contextual.Interpolator.StaticInterpolation#error" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="error(part:Interpolator.this.Literal,offset:Int,message:String):Unit"></a><a id="error(Literal,Int,String):Unit"></a>
+      <span class="permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#error(part:Interpolator.this.Literal,offset:Int,message:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">error</span><span class="params">(<span name="part">part: <a href="Interpolator$Literal.html" class="extype" name="contextual.Interpolator.Literal">Literal</a></span>, <span name="offset">offset: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Report a compile error <code>message</code>, at the index <code>offset</code> within the <a href="Interpolator$Literal.html" class="extype" name="contextual.Interpolator.Literal">Literal</a> <code>part</code>,
+and continue evaluating the macro, whilst compilation will ultimately fail.</p><div class="fullcomment"><div class="comment cmt"><p>Report a compile error <code>message</code>, at the index <code>offset</code> within the <a href="Interpolator$Literal.html" class="extype" name="contextual.Interpolator.Literal">Literal</a> <code>part</code>,
+and continue evaluating the macro, whilst compilation will ultimately fail.
+</p></div><dl class="paramcmts block"><dt class="param">part</dt><dd class="cmt"><p>the <a href="Interpolator$Literal.html" class="extype" name="contextual.Interpolator.Literal">Literal</a> part containing the error</p></dd><dt class="param">offset</dt><dd class="cmt"><p>the index of the error within the <a href="Interpolator$Literal.html" class="extype" name="contextual.Interpolator.Literal">Literal</a> part</p></dd><dt class="param">message</dt><dd class="cmt"><p>the error message to report</p></dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Literal.html#finalize():Unit" title="Permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#finalize():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -422,7 +596,7 @@ about an interpolated string.">
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Literal.html#getClass():Class[_]" title="Permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#getClass():Class[_]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -435,26 +609,26 @@ about an interpolated string.">
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="contextual.Interpolator.Literal#index" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="index:Int"></a>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Literal.html#index:Int" title="Permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#hashCode():Int" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">index</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Int" class="extype" target="_top">Int</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="contextual.Interpolator.Literal">Literal</a> → <a href="Interpolator$RuntimePart.html" class="extype" name="contextual.Interpolator.RuntimePart">RuntimePart</a> → <a href="Interpolator$StaticPart.html" class="extype" name="contextual.Interpolator.StaticPart">StaticPart</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Literal.html#isInstanceOf[T0]:Boolean" title="Permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#isInstanceOf[T0]:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -470,7 +644,7 @@ about an interpolated string.">
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Literal.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#ne(x$1:AnyRef):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -486,7 +660,7 @@ about an interpolated string.">
     </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Literal.html#notify():Unit" title="Permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#notify():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -502,7 +676,7 @@ about an interpolated string.">
     </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Literal.html#notifyAll():Unit" title="Permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#notifyAll():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -515,26 +689,26 @@ about an interpolated string.">
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="contextual.Interpolator.Literal#string" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="string:String"></a>
+    </li><li name="contextual.Interpolator.StaticInterpolation#parts" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="parts:Seq[Interpolator.this.StaticPart]"></a><a id="parts:Seq[StaticPart]"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Literal.html#string:String" title="Permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#parts:Seq[Interpolator.this.StaticPart]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">string</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">parts</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="Interpolator$StaticPart.html" class="extype" name="contextual.Interpolator.StaticPart">StaticPart</a>]</span>
       </span>
       
-      
+      <p class="shortcomment cmt">Provides the sequence of <a href="Interpolator$Literal.html" class="extype" name="contextual.Interpolator.Literal">Literal</a>s and <a href="Interpolator$Hole.html" class="extype" name="contextual.Interpolator.Hole">Hole</a>s in this interpolated string.</p>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Literal.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -547,10 +721,10 @@ about an interpolated string.">
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="contextual.Interpolator.Literal#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="contextual.Interpolator.StaticInterpolation#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Literal.html#toString():String" title="Permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#toString():String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -562,11 +736,27 @@ about an interpolated string.">
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
-      <p class="shortcomment cmt">The string literal</p><div class="fullcomment"><div class="comment cmt"><p>The string literal</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="contextual.Interpolator.Literal">Literal</a> → AnyRef → Any</dd></dl></div>
+      <p class="shortcomment cmt">A string representation of this <a href="" class="extype" name="contextual.Interpolator.StaticInterpolation">StaticInterpolation</a></p><div class="fullcomment"><div class="comment cmt"><p>A string representation of this <a href="" class="extype" name="contextual.Interpolator.StaticInterpolation">StaticInterpolation</a></p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="contextual.Interpolator.StaticInterpolation">StaticInterpolation</a> → AnyRef → Any</dd></dl></div>
+    </li><li name="contextual.Interpolator.StaticInterpolation#universe" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="universe:StaticInterpolation.this.macroContext.universe.type"></a><a id="universe:scala.reflect.macros.whitebox.Context.universe.type"></a>
+      <span class="permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#universe:StaticInterpolation.this.macroContext.universe.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">universe</span><span class="result">: <span class="extype" name="scala.reflect.macros.blackbox.Context.universe">scala.reflect.macros.whitebox.Context.universe</span>.type</span>
+      </span>
+      
+      <p class="shortcomment cmt">The universe of the whitebox macro context, should it be required.</p>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Literal.html#wait():Unit" title="Permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#wait():Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -588,7 +778,7 @@ about an interpolated string.">
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Literal.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -610,7 +800,7 @@ about an interpolated string.">
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$Literal.html#wait(x$1:Long):Unit" title="Permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#wait(x$1:Long):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -629,6 +819,44 @@ about an interpolated string.">
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="contextual.Interpolator.StaticInterpolation#warn" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="warn(part:Interpolator.this.Hole,message:String):Unit"></a><a id="warn(Hole,String):Unit"></a>
+      <span class="permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#warn(part:Interpolator.this.Hole,message:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">warn</span><span class="params">(<span name="part">part: <a href="Interpolator$Hole.html" class="extype" name="contextual.Interpolator.Hole">Hole</a></span>, <span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Report a compile warning <code>message</code>, at the <a href="Interpolator$Hole.html" class="extype" name="contextual.Interpolator.Hole">Hole</a> <code>part</code>, and continue evaluating the
+macro, potentially succeeding despite the warning.</p><div class="fullcomment"><div class="comment cmt"><p>Report a compile warning <code>message</code>, at the <a href="Interpolator$Hole.html" class="extype" name="contextual.Interpolator.Hole">Hole</a> <code>part</code>, and continue evaluating the
+macro, potentially succeeding despite the warning.
+</p></div><dl class="paramcmts block"><dt class="param">part</dt><dd class="cmt"><p>the <a href="Interpolator$Hole.html" class="extype" name="contextual.Interpolator.Hole">Hole</a> part containing the warning</p></dd><dt class="param">message</dt><dd class="cmt"><p>the warning message to report</p></dd></dl></div>
+    </li><li name="contextual.Interpolator.StaticInterpolation#warn" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="warn(part:Interpolator.this.Literal,offset:Int,message:String):Unit"></a><a id="warn(Literal,Int,String):Unit"></a>
+      <span class="permalink">
+      <a href="../contextual/Interpolator$StaticInterpolation.html#warn(part:Interpolator.this.Literal,offset:Int,message:String):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">warn</span><span class="params">(<span name="part">part: <a href="Interpolator$Literal.html" class="extype" name="contextual.Interpolator.Literal">Literal</a></span>, <span name="offset">offset: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Int" class="extype" target="_top">Int</a></span>, <span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Report a compile warning <code>message</code>, at the index <code>offset</code> within the <a href="Interpolator$Literal.html" class="extype" name="contextual.Interpolator.Literal">Literal</a> <code>part</code>,
+and continue evaluating the macro, potentially succeeding despite the warning.</p><div class="fullcomment"><div class="comment cmt"><p>Report a compile warning <code>message</code>, at the index <code>offset</code> within the <a href="Interpolator$Literal.html" class="extype" name="contextual.Interpolator.Literal">Literal</a> <code>part</code>,
+and continue evaluating the macro, potentially succeeding despite the warning.
+</p></div><dl class="paramcmts block"><dt class="param">part</dt><dd class="cmt"><p>the <a href="Interpolator$Literal.html" class="extype" name="contextual.Interpolator.Literal">Literal</a> part containing the warning</p></dd><dt class="param">offset</dt><dd class="cmt"><p>the index of the warning within the <a href="Interpolator$Literal.html" class="extype" name="contextual.Interpolator.Literal">Literal</a> part</p></dd><dt class="param">message</dt><dd class="cmt"><p>the warning message to report</p></dd></dl></div>
     </li>
               </ol>
             </div>
@@ -639,21 +867,7 @@ about an interpolated string.">
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="contextual.Interpolator.RuntimePart">
-              <h3>Inherited from <a href="Interpolator$RuntimePart.html" class="extype" name="contextual.Interpolator.RuntimePart">RuntimePart</a></h3>
-            </div><div class="parent" name="contextual.Interpolator.StaticPart">
-              <h3>Inherited from <a href="Interpolator$StaticPart.html" class="extype" name="contextual.Interpolator.StaticPart">StaticPart</a></h3>
-            </div><div class="parent" name="contextual.Interpolator.Part">
-              <h3>Inherited from <a href="Interpolator$Part.html" class="extype" name="contextual.Interpolator.Part">Part</a></h3>
-            </div><div class="parent" name="scala.Serializable">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></h3>
-            </div><div class="parent" name="java.io.Serializable">
-              <h3>Inherited from <span class="extype" name="java.io.Serializable">Serializable</span></h3>
-            </div><div class="parent" name="scala.Product">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Product" class="extype" target="_top">Product</a></h3>
-            </div><div class="parent" name="scala.Equals">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Equals" class="extype" target="_top">Equals</a></h3>
-            </div><div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.Any" class="extype" target="_top">Any</a></h3>

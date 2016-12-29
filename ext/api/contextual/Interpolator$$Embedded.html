@@ -101,12 +101,12 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="Interpolator$.html">
+        <a title="Companion object for the Interpolator, containing related definitions." href="Interpolator$.html">
               <span class="name">Interpolator</span>
             </a>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="contextual">contextual</a></dd></dl></div>
+      <p class="shortcomment cmt">Companion object for the <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a>, containing related definitions.</p><div class="fullcomment"><div class="comment cmt"><p>Companion object for the <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a>, containing related definitions.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="contextual">contextual</a></dd></dl></div>
     </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="" title="A value which has been embedded as a substitution into an interpolated string, using the
@@ -114,14 +114,6 @@ implicit embed method."></a>
                         <a href="" title="A value which has been embedded as a substitution into an interpolated string, using the
 implicit embed method.">
                           Embedded
-                        </a>
-                      </li><li class="current-entities indented2">
-                        <span class="separator"></span>
-                        <a class="trait" href="Interpolator$$Parts.html" title="Provides case classes representing the literal parts, and interspersed parts of an
-interpolated string."></a>
-                        <a href="Interpolator$$Parts.html" title="Provides case classes representing the literal parts, and interspersed parts of an
-interpolated string.">
-                          Parts
                         </a>
                       </li>
               </ul>
@@ -146,13 +138,14 @@ interpolated string.">
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">Embedded</span><span class="tparams">[<span name="R">R</span>, <span name="I">I &lt;: <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+        <span class="name">Embedded</span><span class="tparams">[<span name="Input">Input</span>, <span name="InterpolatorType">InterpolatorType &lt;: <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.1/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
       </span>
       </h4>
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A value which has been embedded as a substitution into an interpolated string, using the
-implicit <code>embed</code> method.</p></div><div class="toggleContainer block">
+implicit <a href="Interpolator$.html#embed[ContextPair&lt;:(contextual.Context,contextual.Context),Value,Input,InterpolatorType&lt;:contextual.Interpolator](value:Value)(implicitembedder:contextual.Embedder[ContextPair,Value,Input,InterpolatorType]):contextual.Interpolator.Embedded[Input,InterpolatorType]" class="extmbr" name="contextual.Interpolator#embed">embed</a> method.
+</p></div><dl class="paramcmts block"><dt class="tparam">Input</dt><dd class="cmt"><p>the common input type for all substitutions for this <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a></p></dd><dt class="tparam">InterpolatorType</dt><dd class="cmt"><p>the type of <a href="Interpolator.html" class="extype" name="contextual.Interpolator">Interpolator</a> for which this value is embedded</p></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -206,10 +199,10 @@ implicit <code>embed</code> method.</p></div><div class="toggleContainer block">
 
         <div class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="contextual.Interpolator.Embedded#apply" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="apply(ctx:contextual.Context):R"></a><a id="apply(Context):R"></a>
+              <ol><li name="contextual.Interpolator.Embedded#apply" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="apply(context:contextual.Context):Input"></a><a id="apply(Context):Input"></a>
       <span class="permalink">
-      <a href="../contextual/Interpolator$$Embedded.html#apply(ctx:contextual.Context):R" title="Permalink">
+      <a href="../contextual/Interpolator$$Embedded.html#apply(context:contextual.Context):Input" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -218,10 +211,12 @@ implicit <code>embed</code> method.</p></div><div class="toggleContainer block">
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="ctx">ctx: <a href="Context.html" class="extype" name="contextual.Context">Context</a></span>)</span><span class="result">: <span class="extype" name="contextual.Interpolator.Embedded.R">R</span></span>
+        <span class="name">apply</span><span class="params">(<span name="context">context: <a href="Context.html" class="extype" name="contextual.Context">Context</a></span>)</span><span class="result">: <span class="extype" name="contextual.Interpolator.Embedded.Input">Input</span></span>
       </span>
       
-      
+      <p class="shortcomment cmt">Apply the conversion function for the specified <code>context</code>
+</p><div class="fullcomment"><div class="comment cmt"><p>Apply the conversion function for the specified <code>context</code>
+</p></div><dl class="paramcmts block"><dt class="param">context</dt><dd class="cmt"><p>the <a href="Context.html" class="extype" name="contextual.Context">Context</a> to lookup for this embedding</p></dd><dt>returns</dt><dd class="cmt"><p>the common <code>Input</code> type for this interpolator</p></dd></dl></div>
     </li></ol>
             </div>
 
