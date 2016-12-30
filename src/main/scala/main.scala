@@ -198,7 +198,7 @@ object Contextual {
           Contextual is a small Scala library for defining your own string interpolators—prefixed string literals like """, Code("""url"https://google.com""""), """ which determine how they are interpreted at compile-time, including any custom checks and compile errors that should be reported, while only writing very ordinary "user" code: no macros!
         """),
         H3("A simple example"),
-        P("We can define a simple interpolator for URLs, ", Code("""url"""""), ", like this:"),
+        P("We can define a simple interpolator for URLs like this:"),
         Pre("""
           |import contextual._
           |
