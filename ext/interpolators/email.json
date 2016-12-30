@@ -2,7 +2,7 @@
   "ivy": {
     "artifact": "com.propensive",
     "group": "contextual-examples",
-    "versions": ["0.14"]
+    "versions": ["1.0.0"]
   },
   "source": "https://github.com/propensive/contextual/blob/master/examples/src/main/scala/contextual/examples/email.scala",
   "pkg": "contextual.examples.email",
