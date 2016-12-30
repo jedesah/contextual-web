@@ -1,0 +1,89 @@
+#!/bin/sh
+
+NAME=$1
+DOMAIN=$2
+
+case $NAME in
+  '')
+    echo "Please specify a service name"
+    exit 1 ;;
+esac
+
+case $DOMAIN in
+  '')
+    echo "Please specify a domain name"
+    exit 1 ;;
+esac
+
+message() {
+  MSG="$1"
+  GREEN="%{\033[1;32m%}"
+  WHITE="%{\033[1;37m%}"
+  echo "\033[0;35m *\033[0;37m $MSG"
+}
+
+getPort() {
+  SERVICE="$1"
+  docker ps --filter=name=$SERVICE --format "{{.Ports}}" | cut -d: -f2 | cut -d- -f1
+}
+
+freePort() {
+  for P in $(seq 2480 2500); do
+    sudo lsof -n -i :$P >/dev/null || echo $P
+  done | head -n1
+}
+
+writeConfig() {
+  PORT="$1"
+  FILE="/etc/apache2/sites-available/$PORT.conf"
+  message "Writing config to $FILE"
+  sudo sh -c "cat > $FILE" << EOF
+<VirtualHost *:80>
+	ServerAdmin jon.pretty@propensive.com
+	ServerName $DOMAIN
+	ProxyPreserveHost On
+
+	<Proxy *>
+		Order allow,deny
+		Allow from all
+	</Proxy>
+
+	ProxyPass / http://localhost:$PORT/
+	ProxyPassReverse / http://localhost:$PORT/
+</VirtualHost>
+EOF
+}
+
+PORT=$(freePort)
+
+message "Updating git repository"
+git pull
+message "Building new container image"
+docker build -t $NAME . && \
+message "Running test container" && \
+docker run --name=$NAME-test -p 2900:80 -d $NAME sbt run && \
+echo -n 'Is the website at http://test.propensive.com/ working? ' && read ANSWER
+message "Stopping test container"
+docker stop $NAME-test
+message "Removing test container"
+docker rm $NAME-test
+
+if [ "$ANSWER" = "yes" ]; then
+  OLDPORT=$(getPort $NAME)
+  message "Old container is running on port $OLDPORT"
+  message "Starting new container on port $PORT"
+  docker run --name=$NAME-temp -p $PORT:80 -d $NAME sbt run
+  sudo rm -f /etc/apache2/sites-enabled/$OLDPORT.conf /etc/apache2/sites-available/$OLDPORT.conf
+  writeConfig $PORT
+  sudo ln -sf ../sites-available/$PORT.conf /etc/apache2/sites-enabled/$PORT.conf
+  sudo /etc/init.d/apache2 reload
+  message "Stopping old live container"
+  docker stop $NAME-live
+  message "Removing old live container"
+  docker rm $NAME-live
+  message "Renaming new live container"
+  docker rename $NAME-temp $NAME-live
+else
+  message "Aborting redeploy"
+fi
+
