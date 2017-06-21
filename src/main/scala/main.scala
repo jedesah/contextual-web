@@ -237,6 +237,10 @@ object Contextual {
           no restrictions on using macros. This allows the constant parts of an interpolated
           string to be inspected at compile-time, along with the types of the expressions
           substituted into it.
+			  
+	  Note: Scala also allows one to define a string interpolator that make use of generics
+	  (i.e that accepts type parameters). Unfortunatly it's not possible to define a generic string
+	  interpolator using contextual right now. You must define the macro manually in order to achieve that.	  
         """),
         P("""
           Contextual provides a generalized macro for interpolating strings
